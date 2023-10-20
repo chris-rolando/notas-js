@@ -2,7 +2,7 @@
 
 - 🤘 keys { 🧑‍💻:"code", 🦖:"nota", 🤖:"hack", 🚩:"bookmark" }
 
-# 1-Base
+# 1- base
 
 ## Que es JS?
 
@@ -14,8 +14,6 @@
   - Interpretado.
   - Orientado a objetos.
   - Débilmente tipado.
-
-## 🧑‍💻 1-hello-world
 
 ## Operadores
 
