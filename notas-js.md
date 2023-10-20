@@ -119,7 +119,12 @@ debugger;
 
 ## 🤖 Modo estricto
 
-- Es un conjunto de **reglas y características** que proporcionan **mayor seguridad y control** en el código.
+- Conjunto de **reglas y características** que proporcionan **mayor seguridad y control** en el código.
+
+## Recordar:
+- En .js usar camelCase
+  1. let, const, function: **miNombreEs**
+  2. class: **MiClaseEs**
 
 ---
 
