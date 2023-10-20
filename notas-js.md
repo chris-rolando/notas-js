@@ -21,7 +21,7 @@
 
 - +; -; *; /; %; ++; **;
 - <; >; !=;
-- concatenar: "Hola, " + "mundo"
+- concatenar: "Hola" + " mundo"
 - asignación "="
 - igualdad "=="
 - 🚩 mismo valor y tipo "==="
@@ -45,106 +45,79 @@
 - bigint
 - symbol
 
-### 🦖 Symbol
-
-- Tipo de dato único para crear identificadores únicos.
-
-- 🧑‍💻
-
-```
-    const simbolo = Symbol();
-    let mascota = {
-    nombre: "pascal",
-    edad: 1,
-    [simbolo]: "Identificador único"
-    };
-```
-
-## display
+## Display
 - innerHTML: modificar el contenido existente
 - document.write(): escribe en el flujo ( 🦖 agregar contenido )
 
 ## 🚩 Plantillas literales - template strings!
-- 🦖 en Windows usar: alt+96   
+- 🦖 en windows usar: alt+96   
 - 🧑‍💻 console.log(`Hola ${nombre}`);
-
-## typeof
-
-- Para **identificar el tipo de dato** usar: 
-    - 🧑‍💻 console.log(`typeof 007`);
 
 ## Coerción - casteo
 
-🚩 Ver conversión implícita y explícita?
+- 🦖 **convertir un valor de un tipo de dato a otro tipo**.
 
-- 🦖 Consiste en **transformar de un tipo de dato a otro**.
+ en el código. 
+- conversión automática o implícita
 - 🧑‍💻 
-  ```
-  4 + "7" // 47
-  4 * "7" // 28
-  2 + true // 3
-  ```
-
-### Explícita
-
-- Uso de **funciones para transformar** el tipo de dato:
-  - Number()
-  - String()
-  - Boolean().
+```
+const number = 10;
+const string = number; // La variable `string` ahora contiene la cadena "10"
+```
+  
+### casteo: 
+- conversión explícita ( usando funciones )
 - 🧑‍💻 
-  ```
-  Number("47") // 47
-  String(51) // "51"
-  Boolean(1) // true
-  ```
+```
+const number = 10;
+const string = "10";
+
+const castedNumber = Number(string); // La variable `castedNumber` ahora contiene el número 10
+```
 
 ## Truthy & falsy
 
-- Son valores verdaderos y falsos cuando se realiza una coerción a booleano: 
+- Valores verdaderos y falsos 
   - 0, "", NaN, undefined o null.
 - Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos:   
   - Boolean([]), Boolean({}) // true.
 
 ## bloque try-catch
 
-- 🦖 Ejecuta código que podría generar un error, para capturarlo en caso de que ocurra.
-
+- 🦖 Bloque de código que captura un error en caso de que ocurra
 - 🧑‍💻
-  ```
-  try { //Código a probar
-  } catch (error) { //Código en caso de error
-  console.log(error);   }
-  ```
+```
+try { //Código a probar
+} catch (error) { //Código en caso de error
+console.log(error);   }
+```
 
 ### throw new Error
 
 - Crea un nuevo objeto de error con un mensaje.
 
 - 🧑‍💻
-  ```
-  try {
-  const num = 100;
-  if (num > 50) {
-      throw new Error("El número es mayor a 50");
-  }
-  } catch (error) {
-  console.error(error.message);
-  }
-  ```
+```
+try {
+    const num = 100;
+    if (num > 50) {
+        throw new Error("El número es mayor a 50");
+    }
+} catch (error) {
+    console.error(error.message);
+}
+```
 
 ## 🤖 Debugging
 
-- Proceso de encontrar y corregir errores en el código.
-
-### debugger
-
+- Encontrar y corregir errores.
 - Se utiliza para **detener la ejecución** del código en un punto específco.
 
 - 🧑‍💻
-  ```
-  let numero = 5;
-  debugger;
-  ```
+```
+let numero = 5;
+debugger;
+```
 
 ## 🤖 Modo estricto
 
