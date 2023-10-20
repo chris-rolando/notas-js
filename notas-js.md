@@ -1,6 +1,6 @@
 # Notas de Javascript
 
-- 🤘 descripción { 🧑‍💻:"code", 🦖:"nota", 🤖:"hack", 🚩:"bookmark" }
+- 🤘 keys { 🧑‍💻:"code", 🦖:"nota", 🤖:"hack", 🚩:"bookmark" }
 
 # 1-Base
 
@@ -19,22 +19,21 @@
 
 ## Operadores
 
-- simples: +; -; *; /; "%";
-- concatenar "+": "Hola, " + "mundo"
+- +; -; *; /; %; ++; **;
+- <; >; !=;
+- concatenar: "Hola, " + "mundo"
 - asignación "="
 - igualdad "=="
-- 🚩 mismo tipo "==="
-- asignación +=, \*=, -=, /=
-- Desigualdad por valor (!=)
-  - "3" != 3 // false
-- Menor: 3 < 5, Mayor: 3 > 5
+- 🚩 mismo valor y tipo "==="
 - disyunción: AND &&
 - unión: OR ||
 - negación: NOT !
+- diferente valor o tipo: !==
 
 ## Tipos de datos
 
-- 🤖 **"Var" da problemas** con el scope global, 🦖 no usar por esa razón!
+- 🤖 **"Var" da problemas** 
+    - 🦖 razón? el scope global.
 
 - number
 - string
@@ -61,14 +60,18 @@
     };
 ```
 
-## typeof
-
-- Para **identificar el tipo de dato** de un valor.
-- 🧑‍💻 console.log(`typeof 007`);
+## display
+- innerHTML: modificar el contenido existente
+- document.write(): escribe en el flujo ( 🦖 agregar contenido )
 
 ## 🚩 Plantillas literales - template strings!
 - 🦖 en Windows usar: alt+96   
 - 🧑‍💻 console.log(`Hola ${nombre}`);
+
+## typeof
+
+- Para **identificar el tipo de dato** usar: 
+    - 🧑‍💻 console.log(`typeof 007`);
 
 ## Coerción - casteo
 
@@ -94,10 +97,6 @@
   String(51) // "51"
   Boolean(1) // true
   ```
-
-## 🤖 Modo estricto
-
-- Es un conjunto de **reglas y características** que proporcionan **mayor seguridad y control** en el código.
 
 ## Truthy & falsy
 
@@ -146,6 +145,10 @@
   let numero = 5;
   debugger;
   ```
+
+## 🤖 Modo estricto
+
+- Es un conjunto de **reglas y características** que proporcionan **mayor seguridad y control** en el código.
 
 ---
 
