@@ -1,20 +1,21 @@
-# Conceptos base
+# Bases
 
 **Algoritmo:** instrucciones ordenadas para resolver un problema
 
-**Lenguajes de programacion:** reglas para dar instrucciones al PC
+**Lenguajes de programación:** reglas para dar instrucciones al PC
  ## Bajo nivel
- - Lenguaje nativo del PC, pogramar componentes
+ - Lenguaje nativo del PC, es decir pogramar componentes
  ## Alto nivel
- - Lenguaje humanamente entendible, programar aplicaciones
+ - Lenguaje entendible, es decir programar aplicaciones
  ## Interpretado
  - El codigo se ejecuta por un intérprete en tiempo de ejecución
  ## Compilado
  - El codigo se traduce o compila a codigo maquina
 
-**Variable:** espacio reservado en memoria para guardar info (son cajitas)
+**Variable:** espacio reservado en memoria para guardar info
 
-**Funcion:** bloque de código para hacer una tarea
+**Función:** bloque de código para hacer una tarea
+Una funciòn puede:
  1. Ser llamada o invocada.
  2. Recibir parámetros - argumentos.
  3. Procesar info.
@@ -22,48 +23,50 @@
  5. Sirve para organizar, reutilizar, encapsular y separar.
  6. Permite modularidad y abstracción.
 
-**Objetos:** representacion del mundo real.
-- Tiene propiedades y funciones:
-  1. Propiedades o atributos: 
-   - Los datos o (sustantivos)
-   - Características o atributos
-   - Describen su estado
-  2. Funciones o comportamientos: 
-   - Los metodos o (verbos)
-   - Definen el comportamiento
-   - Realizan manipulaciones sobre los datos del objeto
+**Objetos:** es una representacion del mundo real.
+Tiene propiedades y funciones:
+ 1. Propiedades o atributos: 
+  - Los datos o (sustantivos)
+  - Características o atributos
+  - Describen su estado
+ 2. Funciones o comportamientos: 
+  - Los metodos o (verbos)
+  - Definen el comportamiento
+  - Realizan manipulaciones sobre los datos del objeto
 
-**Clases:** plantilla para crear objetos
-**¿Que es POO?** Programacion Orientada a Objetos
-**Paradigma de programación que se enfoca en el uso de objetos** para representar conceptos del mundo real.
-## Elementos:
-- Clases
-- Propiedades
-- Métodos
-- Objetos
+**Clases:** es una plantilla para crear objetos
 
-    **Metodo Constructor:** subrutina para inicializar un objeto cuando se crea una instancia de una clase. 
-    **Metodo vs funcion** EN JS, un método es una función que está asociada a un objeto. Cada objeto tiene sus propios métodos, que se pueden usar para interactuar con el objeto.
+## ¿Que es POO?
+ Programacion Orientada a Objetos, es un paradigma de programación que se **enfoca en el uso de objetos** para representar conceptos del mundo real.
+ 
+ ### Elementos:
+  - Clases
+  - Propiedades
+  - Métodos
+  - Objetos
+ 
+  **Metodo Constructor:** subrutina para inicializar un objeto cuando se crea una instancia de una clase. 
+  **¿Metodo vs funcion?** EN JS, un método es una función que está asociada a un objeto. Cada objeto tiene sus propios métodos, que se pueden usar para interactuar con el objeto.
+ 
+ ### Pilares:
+  - Encapsulamiento
+  - Abstracción
+  - Herencia
+  - Polimorfismo
+ 
+  **Encapsular:** consiste en ocultar los detalles internos, proporcionando una interfaz simplificada.
+  **Abstracción:** enfocarse en el comportamiento, sin preocuparse por su implementación interna.
+  **Herencia:** una clase ( hijo ) herede las propiedades y métodos de otra clase ( padre ).
+  **Polimorfismo:** dos objetos de diferentes clases tengan el mismo comportamiento.
 
-## Pilares:
-- Encapsulamiento
-- Abstracción
-- Herencia
-- Polimorfismo
-
-    **Encapsular:** consiste en ocultar los detalles internos, proporcionando una interfaz simplificada.
-    **Abstracción:** enfocarse en el comportamiento, sin preocuparse por su implementación interna.
-    **Herencia:** una clase ( hijo ) herede las propiedades y métodos de otra clase ( padre ).
-    **Polimorfismo** dos objetos de diferentes clases tengan el mismo comportamiento.
-
-**IDE:** Integrated Development Environment
-- **Entorno de Desarrollo Integrado**
-- Visual studio: entorno completo
-- VS Code: (editor de codigo) entorno simple
+## IDE:
+ Integrated Development Environment o **Entorno de Desarrollo Integrado**
+ 1. Visual studio: entorno completo
+ 2. VS Code: (editor de codigo) entorno simple
 
 **Refactorización:** proceso para reestructurar el código sin cambiar su funcionalidad.
 
-**Garbage collector?** Se encarga de liberar la memoria que ya no se está utilizando.
+**¿Garbage collector?** Se encarga de liberar la memoria que ya no se está utilizando.
 
 **Framework:** conjunto de buenas practicas para resolver problemas.
 
@@ -71,11 +74,10 @@
 
 **DOM:** representación estructurada del documento HTML que permite a programas y scripts acceder para manipular el contenido (estructura, estilo)
 
-**API:**
-- Interfaces de Programación de Aplicaciones
-- Permiten que diferentes componentes de software se comuniquen entre sí. 
+## API:
+ Interfaces de Programación de Aplicaciones, Permiten que diferentes componentes de software se comuniquen entre sí. 
 
-- 🦖 Una API es como una promesa:
+ - Una API es como una promesa:
  - Si el código interno de la biblioteca cambia, esperas que la función siga aceptando los mismos parámetros y devolviendo los mismos resultados. 
  - Eso proporciona una interfaz estable para escribir tu código. 
 
