@@ -34,9 +34,6 @@
    - Realizan manipulaciones sobre los datos del objeto
 
 **Clases:** plantilla para crear objetos
-
-**Metodo Constructor:** para inicializar un objeto cuando se crea una instancia de una clase. 
-
 **¿Que es POO?** Programacion Orientada a Objetos
 **Paradigma de programación que se enfoca en el uso de objetos** para representar conceptos del mundo real.
 ## Elementos:
@@ -44,11 +41,20 @@
 - Propiedades
 - Métodos
 - Objetos
+
+    **Metodo Constructor:** subrutina para inicializar un objeto cuando se crea una instancia de una clase. 
+    **Metodo vs funcion** EN JS, un método es una función que está asociada a un objeto. Cada objeto tiene sus propios métodos, que se pueden usar para interactuar con el objeto.
+
 ## Pilares:
 - Encapsulamiento
 - Abstracción
 - Herencia
 - Polimorfismo
+
+    **Encapsular:** consiste en ocultar los detalles internos, proporcionando una interfaz simplificada.
+    **Abstracción:** enfocarse en el comportamiento, sin preocuparse por su implementación interna.
+    **Herencia:** una clase ( hijo ) herede las propiedades y métodos de otra clase ( padre ).
+    **Polimorfismo** dos objetos de diferentes clases tengan el mismo comportamiento.
 
 **IDE:** Integrated Development Environment
 - **Entorno de Desarrollo Integrado**

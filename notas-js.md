@@ -1,6 +1,10 @@
-# Notas de Javascript
+# 🤘 Notas Javascript
 
-- 🤘 keys { 🧑‍💻:"code", 🦖:"nota", 🤖:"hack", 🚩:"bookmark" }
+- keys: 
+    🧑‍💻: code
+    🦖: nota
+    🤖: hack
+    🚩: bookmark
 
 # 1- base
 
@@ -167,16 +171,21 @@
 - **Seleccion unica**
 - 🧑‍💻 
  ```
- if (edad >= 18){
-     console.log("Puedes conducir")
+ const number = 15;
+ 
+ if (number > 10) {
+   const result = "Mayor que 10";
  } else {
-     console.log("No puedes conducir")
+   const result = "Menor o igual que 10";
  }
+ 
+ console.log(result); // "Mayor que 10"
  ```
 
 ## 🚩 Operador ternario
-- condicion ? Bloque verdadero : Bloque falso
-- 🧑‍💻 `edad >= 18 ? "Puedes conducir" : "No puedes!"`
+- evaluar una condición y devolver un valor en función del resultado
+- condicion ? valor_si_verdadero : valor_si_falso;
+- 🧑‍💻 `const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
 
 ## switch
 - **Selección multiple**
