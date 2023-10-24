@@ -1,4 +1,4 @@
-# Bases
+# Bases 🤘
 
 **Algoritmo:** instrucciones ordenadas para resolver un problema
 
@@ -105,7 +105,7 @@ Tiene propiedades y funciones:
 - Admite algunos elementos de diferentes tipos de datos.
     1. Strings (encerradas entre comillas)
     2. Números
-    3. 🚩 Objetos: estructuras de pares clave-valor
+    3. Objetos: estructuras de pares clave-valor
     4. Arreglos: equivalentes a las listas de Python
 
 - dump() y load() 

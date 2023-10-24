@@ -1,104 +1,101 @@
-# 🤘 Notas Javascript
+# Notas Javascript 🤘
 
-- keys: 
-    🧑‍💻: code
-    🦖: nota
-    🤖: hack
-    🚩: bookmark
+keys: 
+ 🧑‍💻: code
+ 🦖: nota
+ 🤖: hack
+ 🚩: bookmark
 
-# 1- base
+# 1- bases
 
-**Que es JS?** leguaje para programar aplicaciones web.
-- 🦖 Da dinamismo a la web.
+## ¿Que es JS?
+ Es un leguaje para programar aplicaciones web.
+ 🦖 Da dinamismo a la web.
 
-**Caracteristicas:**
-- Dinámico.
-- Interpretado.
-- Orientado a objetos.
-- Débilmente tipado.
+ ### Caracteristicas:
+  - Dinámico.
+  - Interpretado.
+  - Orientado a objetos.
+  - Débilmente tipado.
 
-## Operadores
+**Operadores:**
 - asignación "="
 - igualdad "=="
-- 🚩 mismo valor y tipo "==="
+- mismo valor y tipo "==="
 - disyunción: AND &&
 - unión: OR ||
 - diferente valor o tipo: !==
 
-## Var
-- 🤖 **"Var" da problemas** 
-    - 🦖 razón? el scope global.
+**Var**
+- 🤖 "Var" da problemas! 🦖 por el scope global.
 
-## 🚩 Plantillas literales - template strings!
-- 🦖 en windows usar: alt+96   
-- 🧑‍💻 console.log(`Hola ${nombre}`);
+**Plantillas literales - template strings!** 🚩
+🦖 En windows usar: alt+96   
+🧑‍💻 console.log(`Hola ${nombre}`);
 
 ## Coerción - casteo
-- 🦖 **convertir un valor de un tipo de dato a otro tipo**.
-
- en el código. 
-- conversión automática o implícita
-- 🧑‍💻 
- ```
- const number = 10;
- const string = number; // La variable `string` ahora contiene la cadena "10"
- ```
-  
-### casteo: 
-- conversión explícita ( usando funciones )
-- 🧑‍💻 
- ```
- const number = 10;
- const string = "10";
+ **convertir un valor de un tipo de dato a otro tipo.** 🦖
  
- const castedNumber = Number(string); // La variable `castedNumber` ahora contiene el número 10
- ```
+ 
+ ### conversión automática o implícita
+  - 🧑‍💻 
+   ```
+   const number = 10;
+   const string = number; // La variable `string` ahora contiene la cadena "10"
+   ```
+  
+ ### casteo
+  - conversión explícita ( usando funciones )
+  - 🧑‍💻 
+   ```
+   const number = 10;
+   const string = "10";
+   const castedNumber = Number(string); // La variable `castedNumber` ahora contiene el número 10
+   ```
 
 ## Truthy & falsy
-- Valores verdaderos y falsos 
-  - 0, "", NaN, undefined o null.
+Valores verdaderos y falsos:
+- 0, "", NaN, undefined o null.
 - Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos:   
-  - Boolean([]), Boolean({}) // true.
+ - Boolean([]), Boolean({}) // true.
 
 ## bloque try-catch
-- 🦖 Bloque de código que captura un error en caso de que ocurra
+Bloque de código que captura un error en caso de que ocurra
+- 🧑‍💻
+  ```
+  try { //Código a probar
+  } catch (error) { //Código en caso de error
+  console.log(error);   }
+  ```
+
+## throw new Error
+Crea un nuevo objeto de error con un mensaje.
 - 🧑‍💻
  ```
- try { //Código a probar
- } catch (error) { //Código en caso de error
- console.log(error);   }
- ```
+  try {
+      const num = 100;
+      if (num > 50) {
+          throw new Error("El número es mayor a 50");
+      }
+  } catch (error) {
+      console.error(error.message);
+  }
+  ```
 
-### throw new Error
-- Crea un nuevo objeto de error con un mensaje.
+## Debugging 🤖
+Encontrar y corregir errores, se utiliza para **detener la ejecución** del código en un punto específco.
 - 🧑‍💻
-```
- try {
-     const num = 100;
-     if (num > 50) {
-         throw new Error("El número es mayor a 50");
-     }
- } catch (error) {
-     console.error(error.message);
- }
- ```
+  ```
+  let numero = 5;
+  debugger;
+  ```
 
-## 🤖 Debugging
-- Encontrar y corregir errores.
-- Se utiliza para **detener la ejecución** del código en un punto específco.
-- 🧑‍💻
- ```
- let numero = 5;
- debugger;
- ```
-
-## 🤖 Modo estricto
-- Conjunto de **reglas y características** que proporcionan **mayor seguridad y control** en el código.
+**Modo estricto:** Conjunto de **reglas y características** que proporcionan **mayor seguridad y control** en el código.
 
 ## Recordar:
-- En .js usar camelCase
-  1. let, const, function: **miNombreEs**
-  2. class: **MiClaseEs**
+En .js usar camelCase:
+ 1. let, const, function: **miNombreEs**
+ 2. class: **MiClaseEs**
 
 ---
 
