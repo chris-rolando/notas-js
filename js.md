@@ -1,12 +1,12 @@
 # Notas Javascript 🤘
 
 keys: 
- 🧑‍💻: code
- 🦖: nota
- 🤖: hack
- 🚩: bookmark
+ code 🧑‍💻
+ nota 🦖
+ hack 🤖
+ bookmark 🚩
 
-# 1- bases
+# Bases
 
 ## ¿Que es JS?
  Es un leguaje para programar aplicaciones web.
@@ -27,16 +27,15 @@ keys:
 - diferente valor o tipo: !==
 
 **Var**
-- 🤖 "Var" da problemas! 🦖 por el scope global.
+- "Var" da problemas! 🦖 por el scope global.
 
 **Plantillas literales - template strings!** 🚩
-🦖 En windows usar: alt+96   
+En windows usar: alt+96 🦖 
 🧑‍💻 console.log(`Hola ${nombre}`);
 
 ## Coerción - casteo
  **convertir un valor de un tipo de dato a otro tipo.** 🦖
- 
- 
+  
  ### conversión automática o implícita
   - 🧑‍💻 
    ```
@@ -99,7 +98,7 @@ En .js usar camelCase:
 
 ---
 
-# 2- funciones
+# Funciones
 
 ## Funcion Declarativa 🚩
 Funcion "normal" 🦖
@@ -138,7 +137,7 @@ Funciones de **una sola línea**. 🦖
  saludar();
  ```
 
-## Conceptos 🤖 
+## Extra 🤖 
 - Las **funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
 - Las **funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
 - Las **funciones declarativas tienen alcance de función**.
@@ -146,19 +145,43 @@ Funciones de **una sola línea**. 🦖
 
 ---
 
-# 3- Scope o Ambito de aplicacion
+# Scope ( Ambito de aplicacion )
 
-Es el alcance o **accesibilidad que tiene cada variable**. 🦖
-- Global scope
+Determina el alcance o **accesibilidad que tiene cada variable**. 🦖
+3 tipos:
 - Function scope
+- Global scope 
 - Block scope
 
-## Block scope
-Las **variables pueden ser accedidas desde el bloque** de código (lo que está dentro de {}).
+**Block scope:**
+Las variables pueden ser accedidas desde el bloque.
+El codigo que está dentro de {}.
 
-## Hoisting - Elevación
-Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**.
-Solo funciona con las declaraciones. 🦖
+## Extra 🤖 
+- Usar la menor cantidad posible de variables globales.
+
+# Hoisting ( Elevación )
+
+Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**. 
+🦖 Ya sea el script actual o función actual 
+
+## Ejemplo: 🧑‍💻   
+ ```
+ console.log(name); // undefined
+ var name = "Bard";
+
+ console.log(greet()); // "Hola, Bard!"
+ function greet() {
+  return "Hola, Bard!";
+ }
+ ```
+ - La variable name y la function greet se utilizan antes de ser declarada. 
+ - Esto produce un error?
+ - No, ya que JS hoistea la declaración.
+
+## Extra 🤖 
+- Solo funciona con las declaraciones de variables y funciones.
+- Si es posible, tratar de declarar variables en el top.
 
 ---
 
@@ -889,6 +912,7 @@ console.log(originalArray === copiedArray); // Output: false `
 
 # 🤘 Hands on
 
+
 ## Incorporar JS al proyecto
 
 En el HTML agregar el link al **final**
@@ -935,3 +959,7 @@ addEventListener()
 ## Display
 - innerHTML: modificar el contenido existente
 - document.write(): escribe en el flujo ( 🦖 agregar contenido )
+
+
+# Extra 🚩
+
