@@ -53,19 +53,22 @@ En windows usar: alt+96 🦖
    ```
 
 ## Truthy & falsy
-Valores verdaderos y falsos:
-- 0, "", NaN, undefined o null.
-- Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos:   
- - Boolean([]), Boolean({}) // true.
+ Valores verdaderos y falsos:
+ - 0, "", NaN, undefined o null.
+ - Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos:   
+  - Boolean([]), Boolean({}) // true.
+ 
+## Bloque try-catch
+ Captura un error en caso de que ocurra
+ 
+ 🧑‍💻
+  ```
+  try { //Código a probar
+  } catch (error) { //Código en caso de error
+  console.log(error);   }
 
-## bloque try-catch
-Captura un error en caso de que ocurra
-🧑‍💻
- ```
- try { //Código a probar
- } catch (error) { //Código en caso de error
- console.log(error);   }
- ```
+  ```
+ **finally** ejecuta la instrucciòn sin importar el resultado 
 
 ## throw new Error
 Crea un nuevo objeto de error con un mensaje.
@@ -917,6 +920,19 @@ console.log(originalArray === copiedArray); // Output: false `
 
 ---
 
+
+# Regular Expressions ( regex )
+
+Es una secuencia de caracteres para buscar patrón.
+
+## search()
+ Busca una cadena para un valor especificado y devuelve la posición de la coincidencia.
+
+ 
+
+
+---
+
 # 🤘 Hands on
 
 
@@ -968,5 +984,9 @@ addEventListener()
 - document.write(): escribe en el flujo ( 🦖 agregar contenido )
 
 
-# Extra 🚩
+
+
+# Notas 🚩
+
+- revisar "Error Object"
 
