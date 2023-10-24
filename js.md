@@ -923,12 +923,13 @@ console.log(originalArray === copiedArray); // Output: false `
 
 # Regular Expressions ( regex )
 
-Es una secuencia de caracteres para buscar patrón.
+Es una secuencia de caracteres para buscar y remplazar.
 
-## search()
- Busca una cadena para un valor especificado y devuelve la posición de la coincidencia.
+**search()** Busca una cadena para un valor especificado y devuelve la posición de la coincidencia.
 
- 
+**replace()** Reemplaza un valor con otro valor en una cadena.
+
+
 
 
 ---
