@@ -27,7 +27,7 @@ keys:
 - diferente valor o tipo: !==
 
 **Var**
-- "Var" da problemas! 🦖 por el scope global.
+"Var" da problemas! 🦖 por el scope global.
 
 **Plantillas literales - template strings!** 🚩
 En windows usar: alt+96 🦖 
@@ -59,7 +59,7 @@ Valores verdaderos y falsos:
  - Boolean([]), Boolean({}) // true.
 
 ## bloque try-catch
-Bloque de código que captura un error en caso de que ocurra
+Captura un error en caso de que ocurra
 🧑‍💻
  ```
  try { //Código a probar
@@ -101,47 +101,52 @@ En .js usar camelCase:
 # Funciones
 
 ## Funcion Declarativa 🚩
-Funcion "normal" 🦖
-Se procesan en el **hoisting**
-🧑‍💻
- ```
- function sumar(a, b) {
-     return a + b;
- }
- sumar(a, b);
- ```
+
+ Funcion "normal" 🦖
+ 
+ ### Ejemplo: 🧑‍💻 
+  ```
+  function sumar( a, b ) {
+      return a + b;
+  }
+  sumar( a, b );
+  ```
 
 ## Funcion de Expresion
-Se definen "como una expresión!"
-Puede ser asignada a una variable 🤖
-🧑‍💻
- `let sumar= function (a,b){ return a + b }`
 
-## IIFE (Immediately Invoked Function Expression)
-Función que se **autoejecuta inmediatamente después de ser definida**. 🤖
-- Es anónima!
-- No se puede reutilizar!
+ Se definen "como una expresión!" 🦖
+ Puede ser asignada a una variable 🤖
+ 
+ ### Ejemplo: 🧑‍💻 
+  `let sumar= function (a,b){ return a + b }`
 
-🧑‍💻
+### IIFE (Immediately Invoked Function Expression)
+
+ Función que se **autoejecuta inmediatamente después de ser definida**.
+ - Es anónima!
+ - No se puede reutilizar!
+
+ ### Ejemplo: 🧑‍💻 
   ```
   (function () {
   console.log("Soy una funcion");
   })();
   ```
 
-## Funcion Flecha - Arrow function 🚩
-Funciones de **una sola línea**. 🦖
-🧑‍💻
- ```
- const saludar = () => console.log("Hola");
- saludar();
- ```
+### Funcion Flecha - Arrow function 🚩
+ Funciones de **una sola línea**. 🦖
+
+ ### Ejemplo: 🧑‍💻 
+  ```
+  const saludar = () => console.log("Hola");
+  saludar();
+  ```
 
 ## Extra 🤖 
-- Las **funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
-- Las **funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
-- Las **funciones declarativas tienen alcance de función**.
-- Las **funciones de expresión tienen alcance de variable**.
+- **funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
+- **funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
+- **funciones declarativas tienen alcance de función**.
+- **funciones de expresión tienen alcance de variable**.
 
 ---
 
@@ -159,6 +164,8 @@ El codigo que está dentro de {}.
 
 ## Extra 🤖 
 - Usar la menor cantidad posible de variables globales.
+
+---
 
 # Hoisting ( Elevación )
 
