@@ -148,18 +148,17 @@ Funciones de **una sola línea**. 🦖
 
 # 3- Scope o Ambito de aplicacion
 
-- 🦖 Alcance o **accesibilidad que tiene cada variable**.
-  - Global scope
-  - Function scope
-  - Block scope
+Es el alcance o **accesibilidad que tiene cada variable**. 🦖
+- Global scope
+- Function scope
+- Block scope
 
 ## Block scope
-
-- Las **variables pueden ser accedidas desde el bloque** de código (lo que está dentro de {}).
+Las **variables pueden ser accedidas desde el bloque** de código (lo que está dentro de {}).
 
 ## Hoisting - Elevación
-- Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**.
-- 🦖 Solo funciona con las declaraciones.
+Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**.
+Solo funciona con las declaraciones. 🦖
 
 ---
 
