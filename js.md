@@ -61,16 +61,16 @@ Valores verdaderos y falsos:
 
 ## bloque try-catch
 Bloque de código que captura un error en caso de que ocurra
-- 🧑‍💻
-  ```
-  try { //Código a probar
-  } catch (error) { //Código en caso de error
-  console.log(error);   }
-  ```
+🧑‍💻
+ ```
+ try { //Código a probar
+ } catch (error) { //Código en caso de error
+ console.log(error);   }
+ ```
 
 ## throw new Error
 Crea un nuevo objeto de error con un mensaje.
-- 🧑‍💻
+🧑‍💻
  ```
   try {
       const num = 100;
@@ -84,15 +84,15 @@ Crea un nuevo objeto de error con un mensaje.
 
 ## Debugging 🤖
 Encontrar y corregir errores, se utiliza para **detener la ejecución** del código en un punto específco.
-- 🧑‍💻
-  ```
-  let numero = 5;
-  debugger;
-  ```
+🧑‍💻
+ ```
+ let numero = 5;
+ debugger;
+ ```
 
 **Modo estricto:** Conjunto de **reglas y características** que proporcionan **mayor seguridad y control** en el código.
 
-## Recordar:
+## CamelCase:
 En .js usar camelCase:
  1. let, const, function: **miNombreEs**
  2. class: **MiClaseEs**
@@ -101,10 +101,10 @@ En .js usar camelCase:
 
 # 2- funciones
 
-## 🚩 Funcion Declarativa
-- 🦖 Funcion "normal"
-- 🦖 Se procesan en el **hoisting**
-- 🧑‍💻
+## Funcion Declarativa 🚩
+Funcion "normal" 🦖
+Se procesan en el **hoisting**
+🧑‍💻
  ```
  function sumar(a, b) {
      return a + b;
@@ -112,32 +112,33 @@ En .js usar camelCase:
  sumar(a, b);
  ```
 
-## 🚩 Funcion de Expresion
-- 🦖 Se definen "como una expresión!"
-- 🤖 Puede ser asignada a una variable
-- 🧑‍💻
+## Funcion de Expresion
+Se definen "como una expresión!"
+Puede ser asignada a una variable 🤖
+🧑‍💻
  `let sumar= function (a,b){ return a + b }`
 
-## 🚩 IIFE (Immediately Invoked Function Expression)
-- 🤖 Función que se **autoejecuta inmediatamente después de ser definida**.
-- 🦖 Es anónima!
-- 🤖 No se puede reutilizar!
-- 🧑‍💻
+## IIFE (Immediately Invoked Function Expression)
+Función que se **autoejecuta inmediatamente después de ser definida**. 🤖
+- Es anónima!
+- No se puede reutilizar!
+
+🧑‍💻
   ```
   (function () {
   console.log("Soy una funcion");
   })();
   ```
 
-## 🚩 Funcion Flecha - Arrow function
-- 🦖 Funciones de **una sola línea**.
-- 🧑‍💻
-  ```
-  const saludar = () => console.log("Hola");
-  saludar();
-  ```
+## Funcion Flecha - Arrow function 🚩
+Funciones de **una sola línea**. 🦖
+🧑‍💻
+ ```
+ const saludar = () => console.log("Hola");
+ saludar();
+ ```
 
-## 🤖 Conceptos
+## Conceptos 🤖 
 - Las **funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
 - Las **funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
 - Las **funciones declarativas tienen alcance de función**.
