@@ -18,33 +18,29 @@ keys:
   - Orientado a objetos.
   - Débilmente tipado.
 
-**Operadores:**
+## Operadores:
 - asignación "="
 - igualdad "=="
-- mismo valor y tipo "==="
+- mismo valor y tipo "===" 🚩
 - disyunción: AND &&
 - unión: OR ||
 - diferente valor o tipo: !==
 
-**Var**
-"Var" da problemas! 🦖 por el scope global.
-
-**Plantillas literales - template strings!** 🚩
+## Plantillas literales - template strings! 🚩
 En windows usar: alt+96 🦖 
 🧑‍💻 console.log(`Hola ${nombre}`);
 
 ## Coerción - casteo
- **convertir un valor de un tipo de dato a otro tipo.** 🦖
+ convertir un valor de un tipo de dato a otro tipo.** 🦖
   
- ### conversión automática o implícita
+ ### conversión automática ( implícita )
   - 🧑‍💻 
    ```
    const number = 10;
    const string = number; // La variable `string` ahora contiene la cadena "10"
    ```
   
- ### casteo
-  - conversión explícita ( usando funciones )
+ ### casteo ( explícita ) 
   - 🧑‍💻 
    ```
    const number = 10;
@@ -55,8 +51,7 @@ En windows usar: alt+96 🦖
 ## Truthy & falsy
  Valores verdaderos y falsos:
  - 0, "", NaN, undefined o null.
- - Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos:   
-  - Boolean([]), Boolean({}) // true.
+ - Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos.
  
 ## Bloque try-catch
  Captura un error en caso de que ocurra
@@ -66,12 +61,11 @@ En windows usar: alt+96 🦖
   try { //Código a probar
   } catch (error) { //Código en caso de error
   console.log(error);   }
-
   ```
- **finally** ejecuta la instrucciòn sin importar el resultado 
 
 ## throw new Error
 Crea un nuevo objeto de error con un mensaje.
+
 🧑‍💻
  ```
   try {
@@ -85,16 +79,20 @@ Crea un nuevo objeto de error con un mensaje.
   ```
 
 ## Debugging 🤖
-Encontrar y corregir errores, se utiliza para **detener la ejecución** del código en un punto específco.
+Se utiliza para **detener la ejecución** del código en un punto específco.
 🧑‍💻
  ```
  let numero = 5;
  debugger;
  ```
 
-**Modo estricto:** Conjunto de *reglas y características* que proporcionan *mayor seguridad y control* en el código.
+## Más notas
 
-**this:** se refiere al objeto actual en el que se está ejecutando el código. depende de su contexto.
+**Var** No usar ( si es posible ) por el scope global. 🦖
+
+**Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
+
+**this:** se refiere al objeto actual en el que se está ejecutando el código. ( depende de su contexto ) 🦖
 
 ---
 
