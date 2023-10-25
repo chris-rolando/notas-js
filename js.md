@@ -92,10 +92,12 @@ Encontrar y corregir errores, se utiliza para **detener la ejecución** del cód
  debugger;
  ```
 
-**Modo estricto:** Conjunto de **reglas y características** que proporcionan **mayor seguridad y control** en el código.
+**Modo estricto:** Conjunto de *reglas y características* que proporcionan *mayor seguridad y control* en el código.
 
-## CamelCase:
-En .js usar camelCase:
+**this:** se refiere al objeto actual en el que se está ejecutando el código. depende de su contexto.
+ 
+**CamelCase:**
+Usar:
  1. let, const, function: **miNombreEs**
  2. class: **MiClaseEs**
 
@@ -138,6 +140,7 @@ En .js usar camelCase:
 
 ### Funcion Flecha - Arrow function 🚩
  Funciones de **una sola línea**. 🦖
+ (argumentos) => expresión que se evalúa y se devuelve
 
  ### Ejemplo: 🧑‍💻 
   ```
@@ -192,6 +195,62 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
 ## Extra 🤖 
 - Solo funciona con las declaraciones de variables y funciones.
 - Si es posible, tratar de declarar variables en el top.
+
+---
+
+# typeof
+Se utiliza para devolver el tipo de datos de un valor.
+
+🧑‍💻 
+ ```
+ console.log(`typeof 007`);
+ typeof "John"                 // Returns "string"
+ ```
+
+## Para comprobar o verificar
+
+Por ejemplo: 
+- si un valor es un objeto o función
+- el tipo de datos antes de realizar una operación 
+🧑‍💻
+ ```
+ const value = 25;
+ 
+ if (typeof value === "number") {
+   // Realizar la operación
+ } else {
+   // Lanzar un error
+ }
+ ```
+
+---
+
+# JSON ( JavaScript Object Notation )
+
+Formato para almacenar y transportar datos desde el server.
+- "key":value,
+
+🧑‍💻 ` '{"name":"Chris", "age":30}' `
+
+**JSON.stringify()** Convierte un objeto en una cadena de texto JSON.
+
+**JSON.parse()** Los datos se convierten a object o array 
+  
+ ## Dates
+ 🧑‍💻 
+  ```
+   // usando callback para leer dates 
+   const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+   const obj = JSON.parse(text, function (key, value) {
+     if (key == "birth") {
+       return new Date(value);
+     } else {
+       return value;
+     }
+   });
+    
+   document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+ ```
 
 ---
 
@@ -929,8 +988,9 @@ Es una secuencia de caracteres para buscar y remplazar.
 
 **replace()** Reemplaza un valor con otro valor en una cadena.
 
+---
 
-
+# Workin area
 
 ---
 
@@ -975,12 +1035,9 @@ addEventListener()
   ```
 ---
 
-  ## typeof
 
-- Para **identificar el tipo de dato** usar: 
-    - 🧑‍💻 console.log(`typeof 007`);
 
-## Display
+# Display
 - innerHTML: modificar el contenido existente
 - document.write(): escribe en el flujo ( 🦖 agregar contenido )
 
@@ -989,5 +1046,5 @@ addEventListener()
 
 # Notas 🚩
 
-- revisar "Error Object"
+- ampliar "Error Object"
 
