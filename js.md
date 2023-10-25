@@ -87,165 +87,118 @@ Se utiliza para **detener la ejecución** del código en un punto específco.
  ```
 
 ## Más notas
-
 **Var** No usar ( si es posible ) por el scope global. 🦖
-
 **Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
-
 **this:** se refiere al objeto actual en el que se está ejecutando el código. ( depende de su contexto ) 🦖
 
 ---
 
-# Funciones
+# Funciones 🚩
 
 ## Funcion Declarativa 🚩
-
- Funcion "normal" 🦖
- 
- ### Ejemplo: 🧑‍💻 
-  ```
+Funcion "normal" 🦖
+🧑‍💻 
+ ```
   function sumar( a, b ) {
       return a + b;
   }
   sumar( a, b );
-  ```
+ ```
 
 ## Funcion de Expresion
+Se definen "como una expresión!" 🦖
+Puede ser asignada a una variable 🤖
+🧑‍💻 
+ `let sumar= function (a,b){ return a + b }`
 
- Se definen "como una expresión!" 🦖
- Puede ser asignada a una variable 🤖
- 
- ### Ejemplo: 🧑‍💻 
-  `let sumar= function (a,b){ return a + b }`
-
-### IIFE (Immediately Invoked Function Expression)
-
- Función que se **autoejecuta inmediatamente después de ser definida**.
- - Es anónima!
- - No se puede reutilizar!
-
- ### Ejemplo: 🧑‍💻 
-  ```
+## IIFE (Immediately Invoked Function Expression)
+Función que se autoejecuta inmediatamente después de ser definida 🦖
+- Es anónima!
+- No se puede reutilizar!
+🧑‍💻 
+ ```
   (function () {
   console.log("Soy una funcion");
   })();
-  ```
+ ```
 
-### Funcion Flecha - Arrow function 🚩
- Funciones de **una sola línea**. 🦖
- (argumentos) => expresión que se evalúa y se devuelve
-
- ### Ejemplo: 🧑‍💻 
-  ```
+## Funcion Flecha - Arrow function 🚩
+Funciones de una sola línea 🦖
+(argumentos) => expresión que se evalúa y se devuelve
+🧑‍💻 
+ ```
   const saludar = () => console.log("Hola");
   saludar();
-  ```
+ ```
 
-## Extra 🤖 
-- **funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
-- **funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
-- **funciones declarativas tienen alcance de función**.
-- **funciones de expresión tienen alcance de variable**.
+## Más notas  
+**Funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
+**Funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
+**Funciones declarativas tienen alcance de función**.
+**Funciones de expresión tienen alcance de variable**.
 
 ---
 
-# Scope ( Ambito de aplicacion )
-
+# Scope ( Ambito de aplicacion ) 🚩
 Determina el alcance o **accesibilidad que tiene cada variable**. 🦖
-3 tipos:
+tipos ( importancia ):
 - Function scope
 - Global scope 
 - Block scope
 
+## Más notas
 **Block scope:**
 Las variables pueden ser accedidas desde el bloque.
 El codigo que está dentro de {}.
 
-## Extra 🤖 
-- Usar la menor cantidad posible de variables globales.
-
 ---
 
-# Hoisting ( Elevación )
-
-Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**. 
-🦖 Ya sea el script actual o función actual 
-
-## Ejemplo: 🧑‍💻   
+# Hoisting ( Elevación ) 🚩
+Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**. 🦖 
+🧑‍💻   
  ```
- console.log(name); // undefined
- var name = "Bard";
-
- console.log(greet()); // "Hola, Bard!"
- function greet() {
-  return "Hola, Bard!";
- }
+  console.log(name); // undefined
+  var name = "Bard";
+ 
+  console.log(greet()); // "Hola, Bard!"
+  function greet() {
+   return "Hola, Bard!";
+  }
  ```
- - La variable name y la function greet se utilizan antes de ser declarada. 
- - Esto produce un error?
- - No, ya que JS hoistea la declaración.
+- La variable name y la function greet se utilizan antes de ser declarada. 
+- **Esto produce un error?** *No*, ya que JS hoistea la declaración.
 
-## Extra 🤖 
+## Más notas 
 - Solo funciona con las declaraciones de variables y funciones.
 - Si es posible, tratar de declarar variables en el top.
 
 ---
 
 # typeof
-Se utiliza para devolver el tipo de datos de un valor.
-
+Se utiliza para **retornar el tipo de datos** de un valor. 🦖
 🧑‍💻 
  ```
- console.log(`typeof 007`);
- typeof "John"                 // Returns "string"
+  console.log(`typeof 007`);
+  typeof "John"                 // Returns "string"
  ```
 
-## Para comprobar o verificar
-
-Por ejemplo: 
-- si un valor es un objeto o función
-- el tipo de datos antes de realizar una operación 
+## ¿Uso? 🦖
+Para **comprobar o verificar**
+- Si un valor es un objeto o función! 🤖
+- Si el tipo de datos es el requerido! 🤖
 🧑‍💻
  ```
- const value = 25;
- 
- if (typeof value === "number") {
-   // Realizar la operación
- } else {
-   // Lanzar un error
- }
- ```
-
----
-
-# JSON ( JavaScript Object Notation )
-
-Formato para almacenar y transportar datos desde el server.
-- "key":value,
-
-🧑‍💻 ` '{"name":"Chris", "age":30}' `
-
-**JSON.stringify()** Convierte un objeto en una cadena de texto JSON.
-
-**JSON.parse()** Los datos se convierten a object o array 
+  const value = 25;
   
- ## Dates
- 🧑‍💻 
-  ```
-   // usando callback para leer dates 
-   const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
-   const obj = JSON.parse(text, function (key, value) {
-     if (key == "birth") {
-       return new Date(value);
-     } else {
-       return value;
-     }
-   });
-    
-   document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+  if (typeof value === "number") {
+    // Realizar la operación
+  } else {
+    // Lanzar un error
+  }
  ```
 
 ---
+
 
 # 4- Estructuras de control
 
@@ -987,6 +940,33 @@ Es una secuencia de caracteres para buscar y remplazar.
 
 ---
 
+# JSON ( JavaScript Object Notation )
+Formato para **almacenar y transportar datos** desde el server.
+- "key":value
+🧑‍💻 ` '{"name":"Chris", "age":30}' `
+
+**JSON.stringify()** Convierte un *objeto JS a un JSON*.
+
+**JSON.parse()** Convierte un *JSON a un JS object o array*
+  
+## Trabajar con "Dates"
+ 🧑‍💻 
+  ```
+   // usando callback para leer dates 
+   const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+   const obj = JSON.parse(text, function (key, value) {
+     if (key == "birth") {
+       return new Date(value);
+     } else {
+       return value;
+     }
+   });
+    
+   document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+ ```
+
+---
+
 # Coding
 
 **CamelCase:**
@@ -998,7 +978,10 @@ Usar:
 
 **Misunderstanding Floats** usar "* 10" y luego "/ 10"
 
-**Almacenar valores** almacenar valores en constantes para no recorrer el metodo varias veces
+**Performance** 
+1- Usar la menor cantidad posible de variables globales.
+2- ( Si no es necesario ) no crear variables.
+3- Almacenar valores en constantes para no recorrer el metodo varias veces
 🧑‍💻
  ```
  let l = arr.length;
