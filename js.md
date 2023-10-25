@@ -95,11 +95,6 @@ Encontrar y corregir errores, se utiliza para **detener la ejecución** del cód
 **Modo estricto:** Conjunto de *reglas y características* que proporcionan *mayor seguridad y control* en el código.
 
 **this:** se refiere al objeto actual en el que se está ejecutando el código. depende de su contexto.
- 
-**CamelCase:**
-Usar:
- 1. let, const, function: **miNombreEs**
- 2. class: **MiClaseEs**
 
 ---
 
@@ -990,7 +985,27 @@ Es una secuencia de caracteres para buscar y remplazar.
 
 ---
 
-# Workin area
+
+
+---
+
+# Coding
+
+**CamelCase:**
+Usar:
+ 1. let, const, function: **miNombre**
+ 2. class: **MiClase**
+
+**Usar const** para arrays y objects
+
+**Misunderstanding Floats** usar "* 10" y luego "/ 10"
+
+**Almacenar valores** almacenar valores en constantes para no recorrer el metodo varias veces
+🧑‍💻
+ ```
+ let l = arr.length;
+ for (let i = 0; i < l; i++) {
+ ```
 
 ---
 
