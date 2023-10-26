@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular el área del triangulo</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header class="jumbotron bg-dark">
+      <h1 class="display-4 text-light">Área de triangulo</h1>
+      <p class="text-light">Obtener el área de un triangulo rectangulo</p>
+    </header>
+
+    <main class="container">
+      <section class="work-space">
+        <form onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <label for="base-request">Digite la base:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="base-request"
+              name="base-request"
+              value="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="height-request">Digite la altura:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="height-request"
+              name="height-request"
+              value="0"
+              required
+            />
+          </div>
+
+          <button class="btn btn-primary" onclick="calculateArea()">
+            Calcular
+          </button>
+        </form>
+
+        <textarea
+            id="result"
+            class="form-control mt-3"
+            name="result"
+            rows="1"
+            cols="1"
+            readonly
+          >
+          </textarea>
+      </section>
+    </main>
+
+    <script src="areaTriangulo.js"></script>
+  </body>
+</html>
