@@ -217,17 +217,161 @@ Para **comprobar o verificar**
 
 ---
 
-# 5- Closures 
+# Maps
+Objeto que almacena pares de clave-valor
 
-## 🚩 Definicion
-
-- 🦖 Es la combinación entre una función y el ámbito en el que esta fue declarada.
-- 🦖 Permite a las funciones recordar el estado de su entorno de ejecución.
-- 🤖 Un closure se crea cuando una función es declarada dentro de otra función.
-- Se usa para crear funciones genéricas y reutilizables.
-
-- 🧑‍💻
+ ## Ejemplo: almacenar datos de configuración
+ 🧑‍💻 JSON
   ```
+   {
+     "apiKey": "1234567890",
+     "baseUrl": "https://example.com"
+   }
+  ```
+ 
+ Podemos usar un Map para almacenar la configuración de la app
+ 
+ 🧑‍💻
+  ```
+   const config = new Map();
+   
+   config.set("apiKey", "1234567890");
+   config.set("baseUrl", "https://example.com");
+   
+   const apiKey = config.get("apiKey");
+   const baseUrl = config.get("baseUrl");
+  ```
+ 
+ Este código creará un Map con dos elementos:
+ 
+  1. La clave apiKey con el valor "1234567890".
+  2. La clave baseUrl con el valor "https://example.com".
+
+---
+
+# Objetos
+Es una estructura de datos 🦖
+Es una representación de la realidad 🤖
+ 1. En el cual sus características propias se definen como atributos.
+ 2. Y sus acciones se definen como métodos.
+
+Se define claves: **nombre: valor**.
+🧑‍💻
+ ```
+  let miAuto = {
+     marca: "Toyota",
+     modelo: "Corolla",
+     "año": 2024,
+     detalle: function () {
+      console.log("Es un automovil")
+    }
+  }
+ ```
+
+EN JS excepto por los primitivos y las funciones todo es un objeto 🦖
+Para acceder:
+1. Notacion de corchetes: `objeto["marca"];`
+2. Notacion de punto: `miAuto.marca;`
+
+## Constructor
+Para crear varios objetos.
+🧑‍💻
+ ```
+  function Auto(brand, model){
+      this.marca = brand
+      this.modelo = model
+      this.detalle = function () {
+          console.log(`Auto ${this.marca} modelo ${this.modelo}.`)
+      }
+  }
+  var miAuto = new Auto("Toyota", "Corolla")
+  var otroAuto = new Auto("Tesla", "Model 3")
+ ```
+
+## Objetos literales
+
+**Object.assign()** para copiar de un objeto a otro.
+🧑‍💻
+ ```
+  const objeto1 = {a: 1, b: 2};
+  const objeto2 = {c: 3, d: 4};
+  const nuevoObjeto = Object.assign({}, objeto1, objeto2);
+  console.log(nuevoObjeto); // Output: {a: 1, b: 2, c: 3, d: 4}
+ ```
+
+**Object.freeze()** para impedir que sea modificado
+🧑‍💻
+ ```
+  const objeto = {a: 1, b: 2};
+  Object.freeze(objeto);
+  objeto.a = 3;
+  console.log(objeto.a); // Output: 1
+ ```
+
+**Object.getOwnProperties** retorna un array con todas las propiedades de un objeto que son de su propiedad (no heredadas) 
+🧑‍💻
+ ```
+  const objeto1 = {a: 1, b: 2};
+  const objeto2 = Object.create(objeto1);
+  objeto2.c = 3;
+  console.log(Object.getOwnProperties(objeto2)); // Output: ["c"]
+ ```
+
+**Iterar** retorna un array con las keys del objeto
+1. Bucle for-in. 
+2. Object.keys() & un bucle for-of
+🧑‍💻
+ ```
+  const objeto = {a: 1, b: 2, c: 3};
+  const propiedades = Object.keys(objeto);
+
+  for (let propiedad of propiedades) {
+   console.log(propiedad); // Output: "a", "b", "c"
+  }
+ ```
+
+**Object.values()** retorna un array con los valores de todas las propiedades de un objeto, incluyendo las heredadas
+🧑‍💻
+ ```
+  const objeto1 = {a: 1, b: 2};
+  const objeto2 = Object.create(objeto1);
+  objeto2.c = 3;
+  console.log(Object.values(objeto2)); // Output: [3, 1, 2]
+ ```
+
+**Object.entries()** retorna un array con los pares clave-valor de todas las propiedades de un objeto, incluyendo las heredadas.
+🧑‍💻
+ ```
+  const objeto1 = {a: 1, b: 2};
+  const objeto2 = Object.create(objeto1);
+  objeto2.c = 3;
+  console.log(Object.entries(objeto2)); // Output: [["c", 3], ["a", 1], ["b", 2]]
+ ```
+
+**hasOwnProperty()** retorna un booleano indicando si un objeto tiene una propiedad específica que es de su propiedad (no heredada)
+🧑‍💻
+ ```
+  const objeto1 = {a: 1, b: 2};
+  const objeto2 = Object.create(objeto1);
+  objeto2.c = 3;
+  console.log(objeto2.hasOwnProperty("c")); // Output: true
+  console.log(objeto2.hasOwnProperty("a")); // Output: false
+ ```
+
+---
+
+# code here
+
+---
+
+# 1- Closures 
+
+Es la combinación entre una función y el ámbito en el que esta fue declarada. 🦖
+Permite a las funciones recordar el estado de su entorno de ejecución.
+Se crea cuando una función es declarada dentro de otra función.
+Se usa para crear funciones genéricas y reutilizables. 🤖
+🧑‍💻
+ ```
   function counter() {
   let count = 0;
   return function increment() {
@@ -285,7 +429,7 @@ Para **comprobar o verificar**
   amazon("Mouse");
   amazon("Keyboard");
   amazon(`Display 24"`);
-  ```
+ ```
 
 ## Ámbito léxico
 
@@ -309,161 +453,7 @@ Para **comprobar o verificar**
   ```
 
 ---
-# 6- Objetos
-
-## Definición:
-
-- 🦖 Es una estructura de datos.
-- Objeto es una representación de la realidad, en el cual sus características propias se definen como atributos y sus acciones se definen como métodos.
-- Se define claves: **nombre: valor**.
-
-- 🧑‍💻
-
-  ```
-  // declarar
-  let miAuto = {
-      marca: "Toyota",
-      modelo: "Corolla",
-      "año": 2023,
-      detalle: function () {
-          console.log("Es un automovil ")
-      }
-  }
-  ```
-
-- 🦖 Excepto por los primitivos y las funciones, todo es un objeto.
-
-## Acceder al objeto
-
-1. **Notacion de corchetes**: `objeto["marca"];`
-2. **Notacion de punto**: `miAuto.marca;`
-
-## Constructor
-
-- Sirve para crear varios objetos a partir de nueva información.
-
-- 🧑‍💻
-  ```
-  function Auto(brand, model, year){
-      this.marca = brand
-      this.modelo = model
-      this.año = year
-      this.detalle = function () {
-          console.log(`Auto ${this.modelo} del ${this.año}.`)
-      }
-  }
-  var miAuto = new Auto("Toyota", "Corolla", 2020)
-  var otroAuto = new Auto("Tesla", "Model 3", 2021)
-  var otroAuto2 = new Auto("Suzuki", "K-20", 2019)
-  var otroAuto3 = new Auto("Ferrari", "Model N", 2018)
-  ```
-
-## Objetos literales
-
-- Son una forma de almacenar y manipular datos en el lenguaje. 
-- Pueden contener cualquier tipo de dato, funciones y otros objetos.
-
-### Object.assign()
-- Este método permite copiar las propiedades de un objeto a otro. Por ejemplo:
-
-- 🧑‍💻
-  ```
-  const objeto1 = {a: 1, b: 2};
-  const objeto2 = {c: 3, d: 4};
-
-  // Object.assing necesita de entrada un target al cual asignarle los valores
-  // En este ejemplo el target será un nuevo objeto vacío
-  // Y los siguientes elementos serán las fuentes (que pueden ser varios objetos)
-  
-  const nuevoObjeto = Object.assign({}, objeto1, objeto2);
-  console.log(nuevoObjeto); // Output: {a: 1, b: 2, c: 3, d: 4}
-  ```
-
-### Object.freeze()
-- Este método congela un objeto, impidiendo que sus propiedades sean modificadas. Por ejemplo:
-
-- 🧑‍💻
-  ```
-  const objeto = {a: 1, b: 2};
-  Object.freeze(objeto);
-  objeto.a = 3;
-
-  console.log(objeto.a); // Output: 1
-  ```
-
-### Object.getOwnProperties
-- Este método devuelve un array con todas las propiedades de un objeto que son de su propiedad (no heredadas) 
-
-- 🧑‍💻
-  ```
-  const objeto1 = {a: 1, b: 2};
-  const objeto2 = Object.create(objeto1);
-  objeto2.c = 3;
-
-  console.log(Object.getOwnProperties(objeto2)); // Output: ["c"]
-  ```
-
-### Iterar sobre las propiedades de un objeto
-
-1. Bucle for-in. 
-  
-  - 🧑‍💻
-  ```
-  const objeto = {a: 1, b: 2, c: 3};
-  for (let propiedad in objeto) {
-  console.log(propiedad); // Output: "a", "b", "c"
-  }
-  ```
-
-2. Object.keys() & un bucle for-of
-
-- 🧑‍💻
-  ```
-  const objeto = {a: 1, b: 2, c: 3};
-  const propiedades = Object.keys(objeto);
-
-  // Object.keys da un array con las keys del objeto
-
-  for (let propiedad of propiedades) {
-  console.log(propiedad); // Output: "a", "b", "c"
-  }
-  ```
-
-### Object.values()
-- Este método devuelve un array con los valores de todas las propiedades de un objeto, incluyendo las heredadas
-
-- 🧑‍💻
-  ```
-  const objeto1 = {a: 1, b: 2};
-  const objeto2 = Object.create(objeto1);
-  objeto2.c = 3;
-  console.log(Object.values(objeto2)); // Output: [3, 1, 2]
-  ```
-
-### Object.entries()
-
-- Este método devuelve un array con los pares clave-valor de todas las propiedades de un objeto, incluyendo las heredadas.
-
-- 🧑‍💻
-  ```
-  const objeto1 = {a: 1, b: 2};
-  const objeto2 = Object.create(objeto1);
-  objeto2.c = 3;
-
-  console.log(Object.entries(objeto2)); // Output: [["c", 3], ["a", 1], ["b", 2]]
-  ```
-
-### hasOwnProperty()
-- Este método devuelve un booleano indicando si un objeto tiene una propiedad específica que es de su propiedad (no heredada)
-
-- 🧑‍💻
-  ```
-  const objeto1 = {a: 1, b: 2};
-  const objeto2 = Object.create(objeto1);
-  objeto2.c = 3;
-
-  console.log(objeto2.hasOwnProperty("c")); // Output: true
-  console.log(objeto2.hasOwnProperty("a")); // Output: false
+# aqui
 ---
 
 # 🤘 🐲 7 Array
@@ -949,6 +939,10 @@ Usar:
  let l = arr.length;
  for (let i = 0; i < l; i++) {
  ```
+
+---
+
+# aqui vamos
 
 ---
 
