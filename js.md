@@ -200,58 +200,20 @@ Para **comprobar o verificar**
 ---
 
 
-# 4- Estructuras de control
+# Estructuras de control
 
-## Condicionales
-- **Seleccion unica**
-- 🧑‍💻 
- ```
- const number = 15;
- 
- if (number > 10) {
-   const result = "Mayor que 10";
- } else {
-   const result = "Menor o igual que 10";
- }
- 
- console.log(result); // "Mayor que 10"
- ```
+**if** Seleccion unica
+**switch** *Selección multiple
+**Operador ternario** 🚩 
+ Evaluar una condición y devolver un valor en función del resultado
+ condicion ? valor_si_verdadero : valor_si_falso;
+ 🧑‍💻 `const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
 
-## 🚩 Operador ternario
-- evaluar una condición y devolver un valor en función del resultado
-- condicion ? valor_si_verdadero : valor_si_falso;
-- 🧑‍💻 `const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
-
-## switch
-- **Selección multiple**
-
-## loops
-### for
-- 🦖 **Conocemos la cantidad** de repeticiones.
-- 🧑‍💻
-  ```
-  for (var num = 1; num <= 10; num++) {
-  console.log(i)
-  }
-  ```
-
-### 🚩 for … of
-- Para recorrer los valores de los elementos de un array.
-- 🧑‍💻
-  ```
-  let miArray = [5, 4, 3, 2, 1]
-  for (let elemento of miArray) {
-   console.log(elemento)
-  }
-  ```
-
-🦖 Solo accede al valor de cada uno de los elementos. Si quieres cambiar el array original se puede usar un array auxiliar!
-
-### While
-🦖 **No conocemos la cantidad de repeticiones**.
-while (condición) {
- // Bloque de código
-}
+**for** *Conocemos la cantidad de repeticiones* 
+**for/in**  para iterar sobre las *propiedades enumerables de un objeto* 🦖
+**for/of**  para iterar sobre los *elementos de una colección iterable* 🦖
+**forEach()** función de callback que se utiliza para iterar sobre una colección de elementos y ejecutar una función para cada elemento de la colección. 🚩
+**While** *No conocemos la cantidad* de repeticiones
 
 ---
 
