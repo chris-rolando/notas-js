@@ -199,7 +199,6 @@ Para **comprobar o verificar**
 
 ---
 
-
 # Estructuras de control
 
 **if** Seleccion unica
@@ -360,11 +359,7 @@ Para crear varios objetos.
 
 ---
 
-# code here
-
----
-
-# 1- Closures 
+# 🤘 🐲 Closures 
 
 Es la combinación entre una función y el ámbito en el que esta fue declarada. 🦖
 Permite a las funciones recordar el estado de su entorno de ejecución.
@@ -453,7 +448,8 @@ Se usa para crear funciones genéricas y reutilizables. 🤖
   ```
 
 ---
-# aqui
+
+
 ---
 
 # 🤘 🐲 7 Array
@@ -715,27 +711,28 @@ console.log(originalArray === copiedArray); // Output: false `
   ``` 
 ---
 
-# 🤘 8 Asincronismo
-
-- 🤖 Las operaciones no bloquean el hilo de ejecución principal. por lo que varias operaciones pueden ocurrir al mismo tiempo sin afectar el rendimiento del programa.
+# 🤘 🐲 Asincronismo
+Las operaciones no bloquean el hilo de ejecución principal. 🤖
+Varias operaciones pueden ocurrir al mismo tiempo. 🦖
 
 ## Promesas
+Permiten que una función asíncrona devuelva un valor que **estará disponible en el futuro**, 
+ - de manera exitosa (resolve) 
+ - con un error (reject).
 
-- Permiten que una función asíncrona devuelva un valor que **estará disponible en el futuro**, de manera exitosa (resolve) o con un error (reject).
-
-### promesa simple
-- 🧑‍💻
-  ```
+**simple**
+🧑‍💻
+ ```
   const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
   resolve(42);
   }, 2000);
   });
-  ```
+ ```
 
-### Usando then
-- 🧑‍💻
-  ```
+**then**
+🧑‍💻
+ ```
   const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
   resolve({ number: 42, text: "hello" });
@@ -752,9 +749,9 @@ console.log(originalArray === copiedArray); // Output: false `
   .catch((error) => {
   console.error(error);
   });
-  ```
+ ```
 
-## setInterval y setTimeout
+**setInterval y setTimeout**
 
 - Los temporizadores para programar tareas para que se ejecuten en el futuro.
 - son funciones asincrónicas!
@@ -942,12 +939,7 @@ Usar:
 
 ---
 
-# aqui vamos
-
----
-
-# 🤘 Hands on
-
+# 🤘 🐲 Hands on
 
 ## Incorporar JS al proyecto
 
@@ -989,7 +981,7 @@ addEventListener()
 
 
 
-# Display
+# 🤘 🐲 Display
 - innerHTML: modificar el contenido existente
 - document.write(): escribe en el flujo ( 🦖 agregar contenido )
 
@@ -999,4 +991,5 @@ addEventListener()
 # Notas 🚩
 
 - ampliar "Error Object"
+- editar todos los conpcetos con la clave: 🤘 🐲
 
