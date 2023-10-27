@@ -3,12 +3,12 @@ function compute(firstNumber, secondNumber) {
 
     if(firstNumber !== secondNumber){
         if (firstNumber>secondNumber) {
-            message = `${firstNumber} es mayor que ${secondNumber}`;
+            message += `${firstNumber} es mayor que ${secondNumber}`;
         }else{
-            message = `${secondNumber} es mayor que ${firstNumber}`;
+            message += `${secondNumber} es mayor que ${firstNumber}`;
         }
     }else{
-        message = `${firstNumber} es igual que ${secondNumber}`;
+        message += `${firstNumber} es igual que ${secondNumber}`;
     }
     
     return message;
