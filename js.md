@@ -83,28 +83,27 @@ Se utiliza para **detener la ejecución** del código en un punto específco.
 ```
 
 ## Más notas
-**Var** No usar ( si es posible ) por el scope global. 🦖
+**Var** No Usar, por el scope global. 🦖
 **Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
 **this:** se refiere al objeto actual en el que se está ejecutando el código. ( depende de su contexto ) 🦖
 
 ---
 
-# Funciones 🚩
+# Funciones 🚩 🧑‍💻
 
-## Funcion Declarativa 🚩
+## Funcion Declarativa
 Funcion "normal" 🦖
-🧑‍💻 
- ```
-  function sumar( a, b ) {
-      return a + b;
-  }
-  sumar( 5, 3 );
-
-  function paramOpcional( a, b=3 ) {
-      return a * b;
-  }
-  paramOpcional( 2 );
- ```
+```
+ function sumar( a, b ) {
+     return a + b;
+ }
+ sumar( 5, 3 );
+ // con parametros inicializados ( opcionales )
+ function paramOpcional( a, b=3 ) {
+     return a * b;
+ }
+ paramOpcional( 2 );
+```
 
 ## Funcion de Expresión ( anonima )
 Se definen "como una expresión!" 🦖
@@ -112,37 +111,39 @@ Puede ser asignada a una variable 🤖
 Se usa para: 
  1. Tareas cortas 
  2. Para funciones que solo se necesitan en un lugar
-🧑‍💻 
- ```
-  let sumar= function (a,b){ return a + b }`
-  
-  // uso: tarea corta
-  const imprimirMensaje = () => {
-   console.log("Hola, mundo!");
-  };
+ 3. Como parámetros de otras funciones.
+ 4. Como valores de retorno de otras funciones.
+ 5. Como filtros o validadores.
+ 6. Para manejar eventos.
 
-imprimirMensaje();
+```
+ // uso 1
+ const imprimirMensaje = () => {
+  console.log("Hola, mundo!");
+ };
+ imprimirMensaje();
+
+ // uso 2
+ let sumar= function (a,b){ return a + b }`
 ```
 
 ## IIFE (Immediately Invoked Function Expression)
 Función que se autoejecuta inmediatamente después de ser definida 🦖
 - Es anónima!
 - No se puede reutilizar!
-🧑‍💻 
- ```
-  (function () {
-  console.log("Soy una funcion");
-  })();
- ```
+```
+ (function () {
+ console.log("Soy una funcion");
+ })();
+```
 
-## Funcion Flecha - Arrow function 🚩
+## Funcion Flecha - Arrow function
 Funciones de una sola línea 🦖
 (argumentos) => expresión que se evalúa y se devuelve
-🧑‍💻 
- ```
-  const saludar = () => console.log("Hola");
-  saludar();
- ```
+```
+ const saludar = () => console.log("Hola");
+ saludar();
+```
 
 ## Más notas  
 **Funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
@@ -152,7 +153,7 @@ Funciones de una sola línea 🦖
 
 ---
 
-# Scope ( Ambito de aplicacion ) 🚩
+# Scope ( Ambito de aplicacion )
 Determina el alcance o **accesibilidad que tiene cada variable**. 🦖
 tipos ( importancia ):
 - Function scope
@@ -166,18 +167,17 @@ El codigo que está dentro de {}.
 
 ---
 
-# Hoisting ( Elevación ) 🚩
+# Hoisting ( Elevación )
 Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**. 🦖 
-🧑‍💻   
- ```
-  console.log(name); // undefined
-  var name = "Bard";
- 
-  console.log(greet()); // "Hola, Bard!"
-  function greet() {
-   return "Hola, Bard!";
-  }
- ```
+```
+ console.log(name); // undefined
+ var name = "Bard";
+
+ console.log(greet()); // "Hola, Bard!"
+ function greet() {
+  return "Hola, Bard!";
+ }
+```
 - La variable name y la function greet se utilizan antes de ser declarada. 
 - **Esto produce un error?** *No*, ya que JS hoistea la declaración.
 
@@ -188,27 +188,21 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
 ---
 
 # typeof
-Se utiliza para **retornar el tipo de datos** de un valor. 🦖
-🧑‍💻 
- ```
-  console.log(`typeof 007`);
-  typeof "John"                 // Returns "string"
- ```
+Se utiliza para **retornar el tipo de datos** de un valor. 🦖 
 
-## ¿Uso? 🦖
+**Uso:** 🦖
 Para **comprobar o verificar**
 - Si un valor es un objeto o función! 🤖
 - Si el tipo de datos es el requerido! 🤖
-🧑‍💻
- ```
-  const value = 25;
-  
-  if (typeof value === "number") {
-    // Realizar la operación
-  } else {
-    // Lanzar un error
-  }
- ```
+```
+ const value = 25;
+ 
+ if (typeof value === "number") {
+   // Realizar la operación
+ } else {
+   // Lanzar un error
+ }
+```
 
 ---
 
@@ -216,48 +210,16 @@ Para **comprobar o verificar**
 
 **if** Seleccion unica
 **switch** *Selección multiple
-**Operador ternario** 🚩 
- Evaluar una condición y devolver un valor en función del resultado
- condicion ? valor_si_verdadero : valor_si_falso;
- 🧑‍💻 `const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
+**Operador ternario** 🚩 🧑‍💻
+Evaluar una condición y devolver un valor en función del resultado
+condicion ? valor_si_verdadero : valor_si_falso;
+`const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
 
 **for** *Conocemos la cantidad de repeticiones* 
 **for/in**  para iterar sobre las *propiedades enumerables de un objeto* 🦖
 **for/of**  para iterar sobre los *elementos de una colección iterable* 🦖
 **forEach()** función de callback que se utiliza para iterar sobre una colección de elementos y ejecutar una función para cada elemento de la colección. 🚩
 **While** *No conocemos la cantidad* de repeticiones
-
----
-
-# Maps
-Objeto que almacena pares de clave-valor
-
- ## Ejemplo: almacenar datos de configuración
- 🧑‍💻 JSON
-  ```
-   {
-     "apiKey": "1234567890",
-     "baseUrl": "https://example.com"
-   }
-  ```
- 
- Podemos usar un Map para almacenar la configuración de la app
- 
- 🧑‍💻
-  ```
-   const config = new Map();
-   
-   config.set("apiKey", "1234567890");
-   config.set("baseUrl", "https://example.com");
-   
-   const apiKey = config.get("apiKey");
-   const baseUrl = config.get("baseUrl");
-  ```
- 
- Este código creará un Map con dos elementos:
- 
-  1. La clave apiKey con el valor "1234567890".
-  2. La clave baseUrl con el valor "https://example.com".
 
 ---
 
@@ -371,6 +333,39 @@ Para crear varios objetos.
  ```
 
 ---
+
+# Maps
+Objeto que almacena pares de clave-valor
+
+ ## Ejemplo: almacenar datos de configuración
+ 🧑‍💻 JSON
+  ```
+   {
+     "apiKey": "1234567890",
+     "baseUrl": "https://example.com"
+   }
+  ```
+ 
+ Podemos usar un Map para almacenar la configuración de la app
+ 
+ 🧑‍💻
+  ```
+   const config = new Map();
+   
+   config.set("apiKey", "1234567890");
+   config.set("baseUrl", "https://example.com");
+   
+   const apiKey = config.get("apiKey");
+   const baseUrl = config.get("baseUrl");
+  ```
+ 
+ Este código creará un Map con dos elementos:
+ 
+  1. La clave apiKey con el valor "1234567890".
+  2. La clave baseUrl con el valor "https://example.com".
+
+---
+
 
 # 🤘 🐲 Closures 
 
