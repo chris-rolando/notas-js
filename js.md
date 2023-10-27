@@ -1,22 +1,22 @@
 # Notas de Javascript 🤘
 
 keys: 
- code 🧑‍💻
  nota 🦖
  hack 🤖
  bookmark 🚩
+ code 🧑‍💻
 
 # Bases
 
 ## ¿Que es JS?
  Es un leguaje para programar aplicaciones web.
- 🦖 Da dinamismo a la web.
+ Da dinamismo a la web. 🦖
 
- ### Caracteristicas:
-  - Dinámico.
-  - Interpretado.
-  - Orientado a objetos.
-  - Débilmente tipado.
+ **Caracteristicas:**
+ - Dinámico.
+ - Interpretado.
+ - Orientado a objetos.
+ - Débilmente tipado.
 
 ## Operadores:
 - asignación "="
@@ -26,65 +26,61 @@ keys:
 - unión: OR ||
 - diferente valor o tipo: !==
 
-## Plantillas literales - template strings! 🚩
+## Template strings ( Plantillas literales ) 🚩🧑‍💻
 En windows usar: alt+96 🦖 
-🧑‍💻 console.log(`Hola ${nombre}`);
+```
+ let nombre="Chris";
+ console.log(`Hola ${nombre}`);
+```
 
 ## Coerción - casteo
- convertir un valor de un tipo de dato a otro tipo.** 🦖
+ convertir un valor de un tipo de dato a otro tipo. 🦖
   
- ### conversión automática ( implícita )
-  - 🧑‍💻 
-   ```
-   const number = 10;
-   const string = number; // La variable `string` ahora contiene la cadena "10"
-   ```
+ ### conversión automática ( implícita ) 🧑‍💻 
+ ```
+  const number = 10;
+  const string = number;
+ ```
   
- ### casteo ( explícita ) 
-  - 🧑‍💻 
-   ```
-   const number = 10;
-   const string = "10";
-   const castedNumber = Number(string); // La variable `castedNumber` ahora contiene el número 10
-   ```
+ ### casteo ( explícita ) 🧑‍💻 
+ ```
+  const number = 10;
+  const string = "10";
+  const castedNumber = Number(string);
+ ```
 
 ## Truthy & falsy
- Valores verdaderos y falsos:
- - 0, "", NaN, undefined o null.
- - Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos.
+Valores verdaderos y falsos:
+- 0, "", NaN, undefined o null.
+- Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos.
  
-## Bloque try-catch
- Captura un error en caso de que ocurra
- 
- 🧑‍💻
-  ```
-  try { //Código a probar
-  } catch (error) { //Código en caso de error
-  console.log(error);   }
-  ```
+## Bloque try-catch 🧑‍💻
+Captura un error en caso de que ocurra
+```
+ try { //Código a probar
+ } catch (error) { //Código en caso de error
+ console.log(error);   }
+```
 
-## throw new Error
+## throw new Error 🧑‍💻
 Crea un nuevo objeto de error con un mensaje.
-
-🧑‍💻
- ```
-  try {
-      const num = 100;
-      if (num > 50) {
-          throw new Error("El número es mayor a 50");
-      }
-  } catch (error) {
-      console.error(error.message);
+```
+ try {
+  const num = 100;
+  if (num > 50) {
+   throw new Error("El número es mayor a 50");
   }
-  ```
+ } catch (error) {
+  console.error(error.message);
+ }
+```
 
-## Debugging 🤖
+## Debugging 🤖 🧑‍💻
 Se utiliza para **detener la ejecución** del código en un punto específco.
-🧑‍💻
- ```
+```
  let numero = 5;
  debugger;
- ```
+```
 
 ## Más notas
 **Var** No usar ( si es posible ) por el scope global. 🦖
@@ -110,11 +106,23 @@ Funcion "normal" 🦖
   paramOpcional( 2 );
  ```
 
-## Funcion de Expresion
+## Funcion de Expresión ( anonima )
 Se definen "como una expresión!" 🦖
 Puede ser asignada a una variable 🤖
+Se usa para: 
+ 1. Tareas cortas 
+ 2. Para funciones que solo se necesitan en un lugar
 🧑‍💻 
- `let sumar= function (a,b){ return a + b }`
+ ```
+  let sumar= function (a,b){ return a + b }`
+  
+  // uso: tarea corta
+  const imprimirMensaje = () => {
+   console.log("Hola, mundo!");
+  };
+
+imprimirMensaje();
+```
 
 ## IIFE (Immediately Invoked Function Expression)
 Función que se autoejecuta inmediatamente después de ser definida 🦖
@@ -997,4 +1005,5 @@ addEventListener()
 
 - ampliar "Error Object"
 - editar todos los conpcetos con la clave: 🤘 🐲
+- 
 
