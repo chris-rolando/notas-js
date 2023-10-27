@@ -1,4 +1,4 @@
-# Notas Javascript 🤘
+# Notas de Javascript 🤘
 
 keys: 
  code 🧑‍💻
@@ -102,7 +102,12 @@ Funcion "normal" 🦖
   function sumar( a, b ) {
       return a + b;
   }
-  sumar( a, b );
+  sumar( 5, 3 );
+
+  function paramOpcional( a, b=3 ) {
+      return a * b;
+  }
+  paramOpcional( 2 );
  ```
 
 ## Funcion de Expresion

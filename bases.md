@@ -1,4 +1,4 @@
-# Bases 🤘
+# Conceptos 🤘
 
 **Algoritmo:** instrucciones ordenadas para resolver un problema
 
@@ -15,7 +15,7 @@
 **Variable:** espacio reservado en memoria para guardar info
 
 **Función:** bloque de código para hacer una tarea
-Una funciòn puede:
+Una función puede:
  1. Ser llamada o invocada.
  2. Recibir parámetros - argumentos.
  3. Procesar info.
@@ -23,7 +23,7 @@ Una funciòn puede:
  5. Sirve para organizar, reutilizar, encapsular y separar.
  6. Permite modularidad y abstracción.
 
-**Objetos:** es una representacion del mundo real.
+**Objetos:** es una representación del mundo real.
 Tiene propiedades y funciones:
  1. Propiedades o atributos: 
   - Los datos o (sustantivos)
@@ -46,7 +46,7 @@ Tiene propiedades y funciones:
   - Objetos
  
   **Metodo Constructor:** subrutina para inicializar un objeto cuando se crea una instancia de una clase. 
-  **¿Metodo vs funcion?** EN JS, un método es una función que está asociada a un objeto. Cada objeto tiene sus propios métodos, que se pueden usar para interactuar con el objeto.
+  **¿Metodo vs función?** EN JS, un método es una función que está asociada a un objeto. Cada objeto tiene sus propios métodos, que se pueden usar para interactuar con el objeto.
  
  ### Pilares:
   - Encapsulamiento

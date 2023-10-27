@@ -1,10 +1,10 @@
-# POO - OOP
+# Notas sobre OOP
 
-## ¿Que es POO?
-- Programacion Orientada a Objetos
-- Es un **Paradigma de programación que se enfoca en el uso de objetos** para representar conceptos del mundo real.
+**¿Que es POO?**
+Programacion Orientada a Objetos
+Es un **Paradigma de programación que se enfoca en el uso de objetos** para representar conceptos del mundo real.
 
-### Elementos:
+**Elementos:**
   - Clases
   - Propiedades
   - Métodos
