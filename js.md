@@ -25,7 +25,7 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 - 🧑‍💻 `const number = 10; const string = number; `
   
 **casteo** ( explícita )
-🧑‍💻 
+- 🧑‍💻 
  ```
   const number = 10;
   const string = "10";
@@ -35,40 +35,41 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 ## Truthy & falsy
 Valores verdaderos y falsos:
 - 0, "", NaN, undefined o null.
-- Todo valor que no sea falsy es truthy 
-   incluyendo las estructuras vacías de array y objetos.
+- Todo valor que no sea falsy es truthy
  
 ## Bloque try-catch 
-🧑‍💻
+- 🧑‍💻
  ```
   try { //Código a probar
   } catch (error) { //Código en caso de error
   console.log(error);   }
  ```
 
-## throw new Error 🧑‍💻
-```
- try {
-  const num = 100;
-  if (num > 50) {
-   throw new Error("El número es mayor a 50");
+## throw new Error 
+- 🧑‍💻
+ ```
+  try {
+   const num = 100;
+   if (num > 50) {
+    throw new Error("El número es mayor a 50");
+   }
+  } catch (error) {
+   console.error(error.message);
   }
- } catch (error) {
-  console.error(error.message);
- }
-```
+ ```
 
-## Debugging 🧑‍💻
+## Debugging 
 Se utiliza para **detener la ejecución** del código en un punto específco.
-```
- let numero = 5;
- debugger;
-```
+- 🧑‍💻
+ ```
+  let numero = 5;
+  debugger;
+ ```
 
 ## Más 🚩
-**Var** No Usar, da *problemas con el scope* global. 🦖
+**Var** No Usar, da *problemas con el scope* global.
 **Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
-**this:** se refiere al *objeto actual* en el que se está ejecutando el código. ( depende de su contexto ) 🦖
+**this:** se refiere al *objeto actual* en el que se está ejecutando el código. ( depende de su contexto ) 
 
 ---
 
