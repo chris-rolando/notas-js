@@ -10,11 +10,11 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 
 ## Operadores
 🤖 Ver documentación 
-- 🚩 Asignación "="
-- 🚩 Igualdad "=="
-- 🚩 Mismo valor y tipo "==="
-- 🚩 Negación: !
-- 🚩 Diferente valor o tipo: !==
+- Asignación "="
+- Igualdad "=="
+- Mismo valor y tipo "==="
+- Negación: !
+- Diferente valor o tipo: !==
 
 ## Template strings 
 - 🦖 En windows usar: alt+96 
@@ -33,8 +33,7 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
  ```
 
 ## Truthy & falsy
-Valores verdaderos y falsos:
-- 0, "", NaN, undefined o null.
+- Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 - Todo valor que no sea falsy es truthy
  
 ## Bloque try-catch 
@@ -59,7 +58,7 @@ Valores verdaderos y falsos:
  ```
 
 ## Debugging 
-Se utiliza para **detener la ejecución** del código en un punto específco.
+- Se utiliza para **detener la ejecución** del código en un punto específco.
 - 🧑‍💻
  ```
   let numero = 5;
@@ -68,39 +67,40 @@ Se utiliza para **detener la ejecución** del código en un punto específco.
 
 ## Más
 
-🤖 **Var** No Usar, da *problemas con el scope* global.
-🤖 **Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
-🤖 **this:** se refiere al *objeto actual* en el que se está ejecutando el código. ( depende de su contexto ) 
+- **Var** No Usar, da *problemas con el scope* global.
+- **Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
+- **this:** se refiere al *objeto actual* en el que se está ejecutando el código. ( depende de su contexto ) 
 
 ---
 
-# Funciones 👑
+# 👑 Funciones 
 
-## Funcion Declarativa 🧑‍💻
-Funcion "normal" 🦖
+## Funcion Declarativa 
+- 🦖 Funcion "normal" 
+- 🧑‍💻
 ```
  function sumar( a, b ) {
      return a + b;
  }
  sumar( 5, 3 );
- // ejemplo con parametros opcionales / inicializados
+ // con parametros opcionales o inicializados
  function resta( a, b=3 ) {
      return a - b;
  }
  paramOpcional( 5 );
 ```
 
-## Funcion de Expresión ( anonima ) 🧑‍💻
-Se definen "como una expresión!" 🦖
-Puede ser asignada a una variable 🤖
-Usar para: 👑
+## Funcion de Expresión ( anonima ) 
+- 🦖 Se definen "como una expresión!" 
+- 🤖 Puede ser asignada a una variable 
+- Usar para: 
  1. Tareas cortas 
  2. Para funciones que solo se necesitan en un lugar
  3. Como parámetros de otras funciones.
  4. Como valores de retorno de otras funciones.
  5. Como filtros o validadores.
  6. Para manejar eventos.
-
+- 🧑‍💻
 ```
  // uso 1
  const imprimirMensaje = () => {
@@ -112,20 +112,20 @@ Usar para: 👑
  let sumar= function (a,b){ return a + b }`
 ```
 
-## IIFE (Immediately Invoked Function Expression) 🧑‍💻
-Función que se autoejecuta inmediatamente después de ser definida 🦖
-- Es anónima! 🤖
-- No se puede reutilizar! 🤖
+## IIFE (Immediately Invoked Function Expression) 
+- 🦖 Función que se autoejecuta inmediatamente después de ser definida 
+- Es anónima! 
+- No se puede reutilizar!
+- 🧑‍💻
 ```
  (function () {
  console.log("Soy una funcion");
  })();
 ```
 
-## Funcion Flecha - Arrow function 👑 
-Funciones de una sola línea 🦖
-(argumentos) => expresión que se evalúa y se devuelve
-🧑‍💻 
+## 👑 Funcion Flecha - Arrow function 
+- 🦖 Funciones de una sola línea 
+- 🧑‍💻 (argumentos) => expresión que se evalúa y se devuelve
 ```
  const nombre = "Chris";
  const saludar = () => console.log("Hola " + nombre);
@@ -133,30 +133,31 @@ Funciones de una sola línea 🦖
  
 ```
 
-## Más 🚩 
-**Funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
-**Funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
-**Funciones declarativas tienen alcance de función**.
-**Funciones de expresión tienen alcance de variable**.
+## Más  
+- **Funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
+- **Funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
+- **Funciones declarativas tienen alcance de función**.
+- **Funciones de expresión tienen alcance de variable**.
 
 ---
 
 # Scope ( Ambito de aplicacion )
-Determina el alcance o **accesibilidad que tiene cada variable**. 🦖
-tipos ( importancia ):
+- Determina el alcance o **accesibilidad que tiene cada variable**. 
+- tipos ( importancia ):
 1. Function scope
 2. Global scope 
 3. Block scope
 
-## Más 🚩
+## Más 
 **Block scope:**
-Las variables pueden ser accedidas desde el bloque.
-El codigo que está dentro de {}.
+- Las variables pueden ser accedidas desde el bloque.
+- El codigo que está dentro de {}.
 
 ---
 
 # Hoisting ( Elevación )
-Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**. 🦖 
+- Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**. 
+- 🧑‍💻
 ```
  console.log(name); // undefined
  var name = "Bard";
@@ -168,18 +169,15 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
 ```
 - name y greet() se usan antes de ser declaradas. **Esto produce un error?** *No*, se "hoistea" la declaración.
 
-## Más 🚩
-- Solo funciona con las declaraciones de variables y funciones. 🦖
-- Si es posible, tratar de declarar variables arriba. 🤖
+## Más
+- 🦖 Solo funciona con las declaraciones de variables y funciones.
+- 🤖 Si es posible, tratar de declarar variables arriba.
 
 ---
 
 # typeof
-Se utiliza para **retornar el tipo de datos** de un valor. 🦖 
-
-Para **comprobar o verificar** 🦖
-- Si un valor es un objeto o función! 🤖
-- Si el tipo de datos es el requerido! 🤖
+- Se utiliza para **retornar el tipo de datos** de un valor.
+- 🧑‍💻
 ```
  const value = 25;
  
@@ -193,29 +191,26 @@ Para **comprobar o verificar** 🦖
 ---
 
 # Estructuras de control
+- **if** Seleccion *unica*
+- **switch** Selección *multiple*
+- **Operador ternario** 
+  Evaluar una *condición y devolver un valor* en función del resultado
+  - 🧑‍💻 condicion ? valor_si_verdadero : valor_si_falso;
+  `const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
 
-**if** Seleccion *unica*
-**switch** Selección *multiple*
-**Operador ternario** 🚩 🧑‍💻
-Evaluar una *condición y devolver un valor* en función del resultado
-condicion ? valor_si_verdadero : valor_si_falso;
-`const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
-
-**for** *Conocemos la cantidad de repeticiones* 
-**for/in**  para iterar sobre las *propiedades enumerables de un objeto* 🦖
-**for/of**  para iterar sobre los *elementos de una colección iterable* 🦖
-**forEach()** función de callback que se utiliza para iterar sobre una colección de elementos y ejecutar una función para cada elemento de la colección. 🚩
-**While** *No conocemos la cantidad* de repeticiones
+- **for** *Conocemos la cantidad de repeticiones* 
+- **for/in**  para iterar sobre las *propiedades enumerables de un objeto* 🦖
+- **for/of**  para iterar sobre los *elementos de una colección iterable* 🦖
+- **forEach()** función de callback que se utiliza para iterar sobre una colección de elementos y ejecutar una función para cada elemento de la colección. 🚩
+- **While** *No conocemos la cantidad* de repeticiones
 
 ---
 
-# Objetos 👑
-**Intro** 
-- Excepto por los primitivos y las funciones *todo es un objeto* 🦖
-- Para declararlos *usar const* 🦖
+# 👑 Objetos 
+- 🦖 Excepto por los primitivos y las funciones *todo es un objeto* 
+- 🦖 Para declararlos *usar const* 
 - Se define por pares: *clave: valor*
-
-**Sintaxis** 🧑‍💻
+- 🧑‍💻
  ```
   const auto = {
      marca: "Toyota",
@@ -234,7 +229,7 @@ condicion ? valor_si_verdadero : valor_si_falso;
 
 **Para acceder**
 1. Notacion de corchetes: `auto["marca"];`
-2. Notacion de punto: `auto.marca;` 🦖
+2. Notacion de punto: `auto.marca;`
 
 ## Crear objetos
 🧑‍💻
@@ -251,7 +246,6 @@ condicion ? valor_si_verdadero : valor_si_falso;
  ```
 
 ## Objetos literales
-
 **Object.assign()** para copiar de un objeto a otro.
 🧑‍💻
  ```
