@@ -10,11 +10,11 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 
 ## Operadores
 🤖 Ver documentación 
-- Asignación "="
-- Igualdad "==" 🚩
-- Mismo valor y tipo "===" 🚩
-- Negación: !
-- Diferente valor o tipo: !==
+- 🚩 Asignación "="
+- 🚩 Igualdad "=="
+- 🚩 Mismo valor y tipo "==="
+- 🚩 Negación: !
+- 🚩 Diferente valor o tipo: !==
 
 ## Template strings 
 - 🦖 En windows usar: alt+96 
