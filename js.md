@@ -4,21 +4,21 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 
 # Intro
 
-## Etiqueta script 
+## Cargar script 
 - 🦖 Cargar el script al final.  
 - 🧑‍💻 `<script src="script.js"></script>`
 
 ## Operadores
-Ver documentación 🤖
-- asignación "="
-- igualdad "==" 🚩
-- mismo valor y tipo "===" 🚩
-- negación: !
-- diferente valor o tipo: !==
+🤖 Ver documentación 
+- Asignación "="
+- Igualdad "==" 🚩
+- Mismo valor y tipo "===" 🚩
+- Negación: !
+- Diferente valor o tipo: !==
 
-## Template strings 🧑‍💻
-En windows usar: alt+96 🦖 
-` const nombre="Chris"; console.log(`Hola ${nombre}`); `
+## Template strings 
+- 🦖 En windows usar: alt+96 
+- 🧑‍💻 `const nombre="Chris"; console.log(`Hola ${nombre}`);`
 
 ## Coerción - casteo 🧑‍💻
 **conversión automática** ( implícita )  
