@@ -20,9 +20,9 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 - 🦖 En windows usar: alt+96 
 - 🧑‍💻 `const nombre="Chris"; console.log(`Hola ${nombre}`);`
 
-## Coerción - casteo 🧑‍💻
+## Coerción - casteo 
 **conversión automática** ( implícita )  
-` const number = 10; const string = number; `
+- 🧑‍💻 ` const number = 10; const string = number; `
   
 **casteo** ( explícita )
 ```
