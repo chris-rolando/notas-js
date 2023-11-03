@@ -66,13 +66,11 @@ Se utiliza para **detener la ejecución** del código en un punto específco.
   debugger;
  ```
 
-## Más 🚩
-**Var** No Usar, da *problemas con el scope* global.
-**Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
-**this:** se refiere al *objeto actual* en el que se está ejecutando el código. ( depende de su contexto ) 
-
+## Más
+🤖 **Var** No Usar, da *problemas con el scope* global.
+🤖 **Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
+🤖 **this:** se refiere al *objeto actual* en el que se está ejecutando el código. ( depende de su contexto ) 
 ---
-
 # Funciones 👑
 
 ## Funcion Declarativa 🧑‍💻
