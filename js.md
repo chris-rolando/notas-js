@@ -1,61 +1,44 @@
-# Notas de Javascript 🤘
+# Apuntes Javascript 🤘
 
-keys: 
- nota 🦖
- hack 🤖
- bookmark 🚩
- code 🧑‍💻
+nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 
-# Bases
+# Intro
 
-## ¿Que es JS?
- Es un leguaje para programar aplicaciones web.
- Da dinamismo a la web. 🦖
+## Etiqueta script 
+🦖- Cargar el script al final 
+🧑‍💻
+` <script src="script.js"></script> `
 
- **Caracteristicas:**
- - Dinámico.
- - Interpretado.
- - Orientado a objetos.
- - Débilmente tipado.
-
-## Operadores:
+## Operadores
+Ver documentación 🤖
 - asignación "="
-- igualdad "=="
+- igualdad "==" 🚩
 - mismo valor y tipo "===" 🚩
-- disyunción: AND &&
-- unión: OR ||
+- negación: !
 - diferente valor o tipo: !==
 
-## Template strings ( Plantillas literales ) 🚩🧑‍💻
+## Template strings 🧑‍💻
 En windows usar: alt+96 🦖 
-```
- let nombre="Chris";
- console.log(`Hola ${nombre}`);
-```
+` const nombre="Chris"; console.log(`Hola ${nombre}`); `
 
-## Coerción - casteo
- convertir un valor de un tipo de dato a otro tipo. 🦖
+## Coerción - casteo 🧑‍💻
+**conversión automática** ( implícita )  
+` const number = 10; const string = number; `
   
- ### conversión automática ( implícita ) 🧑‍💻 
- ```
-  const number = 10;
-  const string = number;
- ```
-  
- ### casteo ( explícita ) 🧑‍💻 
- ```
-  const number = 10;
-  const string = "10";
-  const castedNumber = Number(string);
- ```
+**casteo** ( explícita )
+```
+ const number = 10;
+ const string = "10";
+ const castedNumber = Number(string);
+```
 
 ## Truthy & falsy
 Valores verdaderos y falsos:
 - 0, "", NaN, undefined o null.
-- Todo valor que no sea falsy es truthy incluyendo las estructuras vacías de array y objetos.
+- Todo valor que no sea falsy es truthy 🦖
+    incluyendo las estructuras vacías de array y objetos.
  
 ## Bloque try-catch 🧑‍💻
-Captura un error en caso de que ocurra
 ```
  try { //Código a probar
  } catch (error) { //Código en caso de error
@@ -63,7 +46,6 @@ Captura un error en caso de que ocurra
 ```
 
 ## throw new Error 🧑‍💻
-Crea un nuevo objeto de error con un mensaje.
 ```
  try {
   const num = 100;
@@ -75,40 +57,40 @@ Crea un nuevo objeto de error con un mensaje.
  }
 ```
 
-## Debugging 🤖 🧑‍💻
+## Debugging 🧑‍💻
 Se utiliza para **detener la ejecución** del código en un punto específco.
 ```
  let numero = 5;
  debugger;
 ```
 
-## Más notas
-**Var** No Usar, por el scope global. 🦖
+## Más 🚩
+**Var** No Usar, da *problemas con el scope* global. 🦖
 **Modo estricto:** reglas y características que proporcionan *mayor seguridad y control* en el código.
-**this:** se refiere al objeto actual en el que se está ejecutando el código. ( depende de su contexto ) 🦖
+**this:** se refiere al *objeto actual* en el que se está ejecutando el código. ( depende de su contexto ) 🦖
 
 ---
 
-# Funciones 🚩 🧑‍💻
+# Funciones 👑
 
-## Funcion Declarativa
+## Funcion Declarativa 🧑‍💻
 Funcion "normal" 🦖
 ```
  function sumar( a, b ) {
      return a + b;
  }
  sumar( 5, 3 );
- // con parametros inicializados ( opcionales )
- function paramOpcional( a, b=3 ) {
-     return a * b;
+ // ejemplo con parametros opcionales / inicializados
+ function resta( a, b=3 ) {
+     return a - b;
  }
- paramOpcional( 2 );
+ paramOpcional( 5 );
 ```
 
-## Funcion de Expresión ( anonima )
+## Funcion de Expresión ( anonima ) 🧑‍💻
 Se definen "como una expresión!" 🦖
 Puede ser asignada a una variable 🤖
-Se usa para: 
+Usar para: 👑
  1. Tareas cortas 
  2. Para funciones que solo se necesitan en un lugar
  3. Como parámetros de otras funciones.
@@ -127,25 +109,28 @@ Se usa para:
  let sumar= function (a,b){ return a + b }`
 ```
 
-## IIFE (Immediately Invoked Function Expression)
+## IIFE (Immediately Invoked Function Expression) 🧑‍💻
 Función que se autoejecuta inmediatamente después de ser definida 🦖
-- Es anónima!
-- No se puede reutilizar!
+- Es anónima! 🤖
+- No se puede reutilizar! 🤖
 ```
  (function () {
  console.log("Soy una funcion");
  })();
 ```
 
-## Funcion Flecha - Arrow function
+## Funcion Flecha - Arrow function 👑 
 Funciones de una sola línea 🦖
 (argumentos) => expresión que se evalúa y se devuelve
+🧑‍💻 
 ```
- const saludar = () => console.log("Hola");
- saludar();
+ const nombre = "Chris";
+ const saludar = () => console.log("Hola " + nombre);
+ saludar(); // Imprime 'Hola Chris'
+ 
 ```
 
-## Más notas  
+## Más 🚩 
 **Funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
 **Funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
 **Funciones declarativas tienen alcance de función**.
@@ -156,11 +141,11 @@ Funciones de una sola línea 🦖
 # Scope ( Ambito de aplicacion )
 Determina el alcance o **accesibilidad que tiene cada variable**. 🦖
 tipos ( importancia ):
-- Function scope
-- Global scope 
-- Block scope
+1. Function scope
+2. Global scope 
+3. Block scope
 
-## Más notas
+## Más 🚩
 **Block scope:**
 Las variables pueden ser accedidas desde el bloque.
 El codigo que está dentro de {}.
@@ -178,20 +163,18 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
   return "Hola, Bard!";
  }
 ```
-- La variable name y la function greet se utilizan antes de ser declarada. 
-- **Esto produce un error?** *No*, ya que JS hoistea la declaración.
+- name y greet() se usan antes de ser declaradas. **Esto produce un error?** *No*, se "hoistea" la declaración.
 
-## Más notas 
-- Solo funciona con las declaraciones de variables y funciones.
-- Si es posible, tratar de declarar variables en el top.
+## Más 🚩
+- Solo funciona con las declaraciones de variables y funciones. 🦖
+- Si es posible, tratar de declarar variables arriba. 🤖
 
 ---
 
 # typeof
 Se utiliza para **retornar el tipo de datos** de un valor. 🦖 
 
-**Uso:** 🦖
-Para **comprobar o verificar**
+Para **comprobar o verificar** 🦖
 - Si un valor es un objeto o función! 🤖
 - Si el tipo de datos es el requerido! 🤖
 ```
@@ -208,10 +191,10 @@ Para **comprobar o verificar**
 
 # Estructuras de control
 
-**if** Seleccion unica
-**switch** *Selección multiple
+**if** Seleccion *unica*
+**switch** Selección *multiple*
 **Operador ternario** 🚩 🧑‍💻
-Evaluar una condición y devolver un valor en función del resultado
+Evaluar una *condición y devolver un valor* en función del resultado
 condicion ? valor_si_verdadero : valor_si_falso;
 `const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
 
@@ -223,32 +206,34 @@ condicion ? valor_si_verdadero : valor_si_falso;
 
 ---
 
-# Objetos
-Es una estructura de datos 🦖
-Es una representación de la realidad 🤖
- 1. En el cual sus características propias se definen como atributos.
- 2. Y sus acciones se definen como métodos.
+# Objetos 👑
+**Intro** 
+- Excepto por los primitivos y las funciones *todo es un objeto* 🦖
+- Para declararlos *usar const* 🦖
+- Se define por pares: *clave: valor*
 
-Se define claves: **nombre: valor**.
-🧑‍💻
+**Sintaxis** 🧑‍💻
  ```
-  let miAuto = {
+  const auto = {
      marca: "Toyota",
      modelo: "Corolla",
-     "año": 2024,
-     detalle: function () {
-      console.log("Es un automovil")
+     "año": 2024
+  }
+  
+  const vendedor = {
+    nombre: "Juan",
+    idiomas: ["español", "ingles"]
+    saludo: function(){
+      return this.nombre + " habla en " + this.idiomas[0];
     }
   }
  ```
 
-EN JS excepto por los primitivos y las funciones todo es un objeto 🦖
-Para acceder:
-1. Notacion de corchetes: `objeto["marca"];`
-2. Notacion de punto: `miAuto.marca;`
+**Para acceder**
+1. Notacion de corchetes: `auto["marca"];`
+2. Notacion de punto: `auto.marca;` 🦖
 
-## Constructor
-Para crear varios objetos.
+## Crear objetos
 🧑‍💻
  ```
   function Auto(brand, model){
@@ -331,6 +316,233 @@ Para crear varios objetos.
   console.log(objeto2.hasOwnProperty("c")); // Output: true
   console.log(objeto2.hasOwnProperty("a")); // Output: false
  ```
+
+---
+
+# Array 👑
+Es un tipo de objeto 🦖 
+Declarar usando const 🦖
+
+🧑‍💻
+ ```
+  let myInts = new Array();
+  myInts = [5,0,6];
+
+  let myStrings = ["blue", "white", "red"];
+
+  let store = [
+   { product: "Bike", price: 1500 },
+   { product: "TV", price: 1800 }
+  ]
+ ```
+
+**indexOf()**
+Encontrar la *posición de un valor*, sino retornara -1.
+myInts.indexOf(6);
+
+**forEach()**
+Ejecutar una función para cada uno de los elementos. 🦖 
+**No retorna ningún valor.**
+🧑‍💻  
+ ```
+  myInts.forEach(( element ) =>  {
+  console.log(element);
+  });
+ ```
+
+## Métodos mutables ( modifican el array ) 
+Cambian su estado actual
+
+**push()** agregar 
+ ```
+  myInts.push(7); 
+  console.log(myInts);// [ 5, 0, 6, 7 ]
+ ```
+**unshift()** agregar
+ ```
+  myInts.unshift(0); 
+  console.log(myInts);// [0, 5, 0, 6]
+ ```
+**pop()** eliminar
+ ```
+  myInts.pop(); 
+  console.log(myInts);// [ 5,0 ]
+ ```
+**shift()** eliminar
+ ```
+  myInts.shift(); 
+  console.log(myInts);// [ 0,6 ]
+ ```
+
+### Más metodos
+**splice()** agrega o elimina elementos del array.
+**sort()** ordena los elementos del array.
+**reverse()** invierte el orden de los elementos del array.
+**fill()** rellena todos los elementos del array con un valor específico.
+**copyWithin()** copia una parte del array y la pega en otra parte del mismo array.
+
+## Métodos inmutables ( Crean un nuevo array )
+
+**filter()**
+Nuevo array con todos los elementos que pasan una condición
+🧑‍💻
+ ```
+  let workingFilter = articulos.filter(function (articulo) {
+  return articulo.costo <= 500
+  })
+  console.log(workingFilter)
+ ```
+
+**map()**
+Nuevo array a partir de un array existente, aplicando una función a cada elemento del array original.
+🧑‍💻
+ ```
+  let workingMap = articulos.map(function (articulo) {
+  return articulo.nombre
+  })
+  console.log(workingMap)
+ ```
+
+**find()**
+Encontrar el primer elemento que cumpla con la condición. Sino retornará undefined.
+🧑‍💻
+ ```
+  var workingFind = articulos.find(function (articulo) {
+  return (articulo.nombre = "Laptop")
+  })
+  console.log(workingFind)
+ ```
+
+**some()**
+Retornar un valor lógico verdadero si existe al menos un elemento que cumpla la condición.
+🧑‍💻
+ ```
+  let workingSome = articulos.some(function (articulo) {
+  return articulo.costo <= 700
+  })
+  console.log(workingSome)
+ ```
+
+### Más metodos
+**concat()** une dos o más arrays en uno nuevo.
+**slice()** devuelve una copia de una parte del array original.
+**every()** devuelve true si todos los elementos pasan la condición en una función.
+**findIndex()** devuelve el índice del primer elemento que pasa la condición especificada en una función.
+**reduce()** aplica una función acumuladora a cada elemento del array, y devuelve un único valor.
+**reduceRight()** aplica una función acumuladora a cada elemento del array en orden inverso, y devuelve un único valor.
+
+## Array.from()
+*Crear un nuevo array* a partir de un *objeto iterable*. 
+🧑‍💻 
+ ```
+  let myArray = Array.from('hello');
+  console.log(myArray); // ["h", "e", "l", "l", "o"]
+ ```
+
+## Array(n).fill()
+Llena todos los elementos de un array con un valor específico
+🧑‍💻 `let myArray = new Array(5).fill(0); // [0, 0, 0, 0, 0]`
+
+## Array.isArray()
+Determinar si un objeto es un array o no.
+🧑‍💻 `console.log(Array.isArray(myArray)); // true`
+
+## Spread operator
+Expandir un iterable en sus elementos individuales.
+🧑‍💻 
+ ```
+  const originalArray = [1, 2, 3, 4];
+  const copiedArray = [...originalArray];
+ ```
+
+## Arrays Bidimensionales ( arrays de arrays )
+🧑‍💻 
+ ```
+  const matrix = [];
+  matrix[0] = [1, 2, 3];
+  matrix[1] = [4, 5, 6];
+  matrix[2] = [7, 8, 9];
+  console.log(matrix);
+ ```
+
+## Array.protoype.includes()
+Función para determinar si un elemento existe en un array. 
+Sin tener que recorrer todo el array.
+
+🧑‍💻
+ ``` 
+  const numbers = [1, 2, 3, 4, 5];
+  const result = numbers.includes(3);
+  console.log(result); // true
+ ```
+
+ /*El método también puede buscar objetos y otros tipos de datos. Sin embargo, se realiza utilizando la comparación de igualdad estricta "==="
+ Sólo se considerarán iguales dos objetos si se refieren a la misma ubicación en memoria.*/
+
+## Array.protoype.join()
+Convertir todos los elementos de un array en un solo string.
+🧑‍💻
+ ``` 
+  const fruits = ["apple", "banana", "cherry"];
+  const fruitsString = fruits.join(", ");
+  console.log(fruitsString); // "apple, banana, cherry"
+ ``` 
+
+## Array.prototype.flat()
+Combinar varios arreglos en un solo arreglo (sin niveles adicionales de anidamiento). 
+Puede aceptar un argumento opcional, que indica la profundidad de anidamiento máxima hasta la cual se deben aplanar los arreglos.
+🧑‍💻
+ ``` 
+  const multiDimensionalArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+  const flatArray = multiDimensionalArray.flat();
+  //const flatArray = multiDimensionalArray.flat(1); en este caso indica el valor opcional
+  console.log(flatArray); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+ ``` 
+  
+## Array.prototype.flatMap()
+Combina Array.prototype.map() y Array.prototype.flat(). 
+Para transformar cada elemento del arreglo, luego aplana el resultado hasta obtener un único arreglo con los elementos resultantes.
+
+🧑‍💻
+ ``` 
+  const numbers = [1, 2, 3, 4];
+
+  const result = numbers.flatMap(x => [x, x * 2]);
+
+  console.log(result); // Output: [1, 2, 2, 4, 3, 6, 4, 8]
+ ``` 
+
+Puede ser útil para eliminar elementos null o undefined de un arreglo 🤖
+🧑‍💻
+ ``` 
+  const values = [1, 2, 3, null, 4, undefined, 5];
+
+  const result = values.flatMap(x => x);
+
+  console.log(result);
+  // Output: [1, 2, 3, 4, 5]
+ ``` 
+
+---
+
+# Eventos
+Son el resultado de que algo que ocurre en el HTML
+Se usan para interactuar con el usuario, responder a cambios o validar acciones
+addEventListener( nombre_del_evento, funcion )
+
+🧑‍💻
+ ```
+  const boton = document.querySelector("button");
+  
+  boton.addEventListener("click", () => {
+    console.log("El botón fue clicado!");
+  });
+ ```
+**usar on** si el evento está "conectado" a un elemento. 🤖 
+
+**Event Handlers**
+"Manejadores de Eventos" son funciones que se ejecutan cuando ocurre un evento. 
+Se utilizan para responder al usuario y para el comportamiento de la página.
 
 ---
 
@@ -460,264 +672,6 @@ Se usa para crear funciones genéricas y reutilizables. 🤖
 
 ---
 
-# 🤘 🐲 7 Array
-
-## Defición
-
-- Es una estructura de datos
-- Es un tipo de objeto
-- 🦖 Sirve para **almacenar colecciones de datos**.
-
-##  Declarar e inicializar?
-
-- 🧑‍💻
-  ```
-  let myInts = new Array();
-  myInts = [5,0,6];
-
-  let myStrings = ["blue", "white", "red"];
-
-  let myNames = ["Chris", "Gaby", "Amanda"];
-
-  let store = [
-      { product: "Bike", price: 1500 },
-      { product: "TV", price: 1800 },
-      { product: "Book", price: 50 }
-      ]
-  ```
-
-## Const array[]
-- se permite cambiar los elementos de un array. pero no re declararlo
-
-## 🤖 indexOf()
-
-- Encontrar la posición de un valor específico
-- Si no se encuentra retorna -1.
-- myInts.indexOf(2);
-
-## forEach()
-
-- 🦖 Ejecutar una función para cada uno de los elementos.
-- 🤖 **No retorna ningún valor.**
-- 🧑‍💻  
-  ```
-  store.forEach(function (store) {
-  console.log(store.product);
-  })
-  ```
-
-## 🤖 Métodos mutables
-
-- 🦖 Modifican el array (es decir **cambian su estado actual**)
-
-### push() - agregar 
-  `myInts.push(7); 
-  console.log(myInts);// [ 5, 0, 6, 7 ]`
-### unshift() - agregar
-  `myInts.unshift(0); 
-  console.log(myInts);// [0, 5, 0, 6]`
-### pop() - eliminar
-  `myInts.pop(); 
-  console.log(myInts);// [ 5,0 ]`
-### shift() - eliminar
-  `myInts.shift(); 
-  console.log(myInts);// [ 0,6 ]`
-
-### Más metodos
-
-- splice(): agrega o elimina elementos del array.
-- sort(): ordena los elementos del array.
-- reverse(): invierte el orden de los elementos del array.
-- fill(): rellena todos los elementos del array con un valor específico.
-- copyWithin(): copia una parte del array y la pega en otra parte del mismo array.
-
-## 🤖 Métodos inmutables
-
-- 🦖 **Crean un nuevo array!**
-
-###  filter()
-
-- 🦖 Crea un nuevo array con todos los elementos que pasan una condición especificada en una función.
-
-- 🧑‍💻
-  ```
-  let workingFilter = articulos.filter(function (articulo) {
-  return articulo.costo <= 500
-  })
-
-  console.log(workingFilter)
-  ```
-
-### map()
-
-🦖 Crea un nuevo array con los resultados de llamar a una función para cada elemento del array original.
-
-- 🧑‍💻
-  ```
-  let workingMap = articulos.map(function (articulo) {
-  return articulo.nombre
-  })
-  console.log(workingMap)
-  ```
-
-### find()
-
-- **Encontrar el primer elemento de un array que cumpla con la condición**.
-- Si ningún elemento cumpla con la condición, retornará undefined.
-
-- 🧑‍💻
-  ```
-  var workingFind = articulos.find(function (articulo) {
-  return (articulo.nombre = "Laptop")
-  })
-  console.log(workingFind)
-  ```
-
-### some()
-
-- 🦖 Retornar un valor lógico verdadero si existe al menos un elemento que cumpla la condición.
-
-- 🧑‍💻
-  ```
-  let workingSome = articulos.some(function (articulo) {
-  return articulo.costo <= 700
-  })
-  console.log(workingSome)
-  ```
-
-### Más metodos
-
-- concat(): **une** dos o más arrays en uno nuevo.
-- slice(): devuelve una **copia de una parte** del array original.
-- every(): devuelve **true si todos** los elementos del array pasan la condición especificada en una función.
-- findIndex(): devuelve el **índice del primer elemento del array** que pasa la condición especificada en una función.
-  reduce(): aplica una función acumuladora a cada elemento del array, y devuelve un único valor.
-  reduceRight(): aplica una función acumuladora a cada elemento del array en orden inverso, y devuelve un único valor.
-
-## Copiar array
-
-### Array.from()
-
-- Crear un nuevo array en base de un objeto.
-- 🧑‍💻 `let myArray = Array.from('hello');
-console.log(myArray); // ["h", "e", "l", "l", "o"]`
-
-### Array(n).fill()
-
-- Llenar un array con un valor específico
-- 🧑‍💻 `let myArray = new Array(5).fill(0);
-console.log(myArray); // [0, 0, 0, 0, 0]`
-
-### Array.isArray()
-
-- Determinar si un objeto es un array o no.
-- 🧑‍💻 `let myArray = [1, 2, 3, 4];
-console.log(Array.isArray(myArray)); // true`
-
-### spread operator
-
-- 🧑‍💻 `const originalArray = [1, 2, 3, 4];
-const copiedArray = [...originalArray];
-console.log(originalArray === copiedArray); // Output: false `
-
-## Arrays Bidimensionales
-
-- Son un tipo de estructura de datos en la que cada elemento es un array y cada uno de esos arrays contiene más elementos (son arrays de arrays).
-
-- 🧑‍💻 
-  ```
-  const matrix = [];
-  matrix[0] = [1, 2, 3];
-  matrix[1] = [4, 5, 6];
-  matrix[2] = [7, 8, 9];
-  console.log(matrix);
-  ```
-
-## Array.protoype.includes()
-
-- Es una función para determinar si un elemento existe en un array. Sin tener que recorrer todo el array.
-
-- Recibe dos parámetros: 
-  1. El elemento que se quiere buscar
-  2. El índice desde donde se iniciará la búsqueda. Si no se proporciona comenzará desde el índice 0.
-
-- Retorna un valor booleano 
-  - Si el elemento se encuentra será true
-  - Sino el valor será false.
-
-- 🧑‍💻
-  ``` 
-  const numbers = [1, 2, 3, 4, 5];
-
-  const result = numbers.includes(3);
-
-  console.log(result); // true
-  ```
-
-- 🦖 el método también puede buscar objetos y otros tipos de datos. Sin embargo, se realiza utilizando la comparación de igualdad estricta "==="
-  - Sólo se considerarán iguales dos objetos si se refieren a la misma ubicación en memoria.
-
-## Array.protoype.join()
-
-- Convertir todos los elementos de un array en un solo string.
-- Recibe como argumento un separador, que es una cadena de texto que se utilizará para separar los elementos del arreglo en el string resultante.
-
-- 🧑‍💻
-  ``` 
-  const fruits = ["apple", "banana", "cherry"];
-
-  const fruitsString = fruits.join(", ");
-
-  console.log(fruitsString); // "apple, banana, cherry"
-  ``` 
-
-- 🦖 El separador es (, ) pero podemos usar cualquier otro. Si no se proporciona un separador, se usará una coma (,).
-- 🦖 No modifica directamente el arreglo original, sino que retorna una nueva cadena de texto con los elementos del array original.
-
-## Array.prototype.flat()
-
-- Combinar varios arreglos en un solo arreglo (sin niveles adicionales de anidamiento). 
-
-- Puede aceptar un argumento opcional, que indica la profundidad de anidamiento máxima hasta la cual se deben aplanar los arreglos.
-
-- 🧑‍💻
-  ``` 
-  const multiDimensionalArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-
-  const flatArray = multiDimensionalArray.flat();
-  //const flatArray = multiDimensionalArray.flat(1); en este caso indica el valor opcional
-
-  console.log(flatArray); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
-  ``` 
-  
-## Array.prototype.flatMap()
-
-- Combina Array.prototype.map() y Array.prototype.flat(). 
-  - Para transformar cada elemento del arreglo, luego aplana el resultado hasta obtener un único arreglo con los elementos resultantes.
-
-- Recibe una función que se aplicará a cada elemento del arreglo. La función aplicada a cada elemento devuelve un nuevo arreglo, y flatMap aplana este arreglo resultante en un único arreglo.
-
-- 🧑‍💻
-  ``` 
-  const numbers = [1, 2, 3, 4];
-
-  const result = numbers.flatMap(x => [x, x * 2]);
-
-  console.log(result); // Output: [1, 2, 2, 4, 3, 6, 4, 8]
-  ``` 
-
-- 🤖 flatMap también puede ser útil para eliminar elementos null o undefined de un arreglo
-
-- 🧑‍💻
-  ``` 
-  const values = [1, 2, 3, null, 4, undefined, 5];
-
-  const result = values.flatMap(x => x);
-
-  console.log(result);
-  // Output: [1, 2, 3, 4, 5]
-  ``` 
----
 
 # 🤘 🐲 Asincronismo
 Las operaciones no bloquean el hilo de ejecución principal. 🤖
@@ -989,16 +943,15 @@ addEventListener()
 
 
 
-# 🤘 🐲 Display
-- innerHTML: modificar el contenido existente
-- document.write(): escribe en el flujo ( 🦖 agregar contenido )
+# Display
+**innerHTML** modificar elementos HTML existentes 🚩
+**document.write()** agregar nuevo contenido 🦖
 
+---
 
-
-
-# Notas 🚩
-
-- ampliar "Error Object"
-- editar todos los conpcetos con la clave: 🤘 🐲
-- 
-
+# Pendiente 🤘 🐲
+- Ampliar() 
+ - "Error Object"
+ - metodos de array y string
+ - number properties
+- repasar operadores

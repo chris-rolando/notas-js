@@ -3,14 +3,14 @@
 **Algoritmo:** instrucciones ordenadas para resolver un problema
 
 **Lenguajes de programación:** reglas para dar instrucciones al PC
- ## Bajo nivel
- - Lenguaje nativo del PC, es decir pogramar componentes
- ## Alto nivel
- - Lenguaje entendible, es decir programar aplicaciones
- ## Interpretado
- - El codigo se ejecuta por un intérprete en tiempo de ejecución
- ## Compilado
- - El codigo se traduce o compila a codigo maquina
+  *Bajo nivel*
+  - Lenguaje nativo del PC, es decir pogramar componentes
+  *Alto nivel*
+  - Lenguaje entendible, es decir programar aplicaciones
+  *Interpretado*
+  - El codigo se ejecuta por un intérprete en tiempo de ejecución
+  *Compilado*
+  - El codigo se traduce o compila a codigo maquina
 
 **Variable:** espacio reservado en memoria para guardar info
 
@@ -23,18 +23,21 @@ Una función puede:
  5. Sirve para organizar, reutilizar, encapsular y separar.
  6. Permite modularidad y abstracción.
 
-**Objetos:** es una representación del mundo real.
+**Objetos:** es una representación del mundo real. 
+Es una estructura de datos formada por clave:valor
 Tiene propiedades y funciones:
- 1. Propiedades o atributos: 
-  - Los datos o (sustantivos)
-  - Características o atributos
-  - Describen su estado
- 2. Funciones o comportamientos: 
-  - Los metodos o (verbos)
-  - Definen el comportamiento
-  - Realizan manipulaciones sobre los datos del objeto
+1. Propiedades o atributos: 
+ - Los datos o (sustantivos)
+ - Características o atributos
+ - Describen su estado
+2. Funciones o comportamientos: 
+ - Los metodos o (verbos)
+ - Definen el comportamiento
+ - Realizan manipulaciones sobre los datos del objeto
 
 **Clases:** es una plantilla para crear objetos
+
+**Eventos** acciòn o suceso que pasa en la app
 
 ## ¿Que es POO?
  Programacion Orientada a Objetos, es un paradigma de programación que se **enfoca en el uso de objetos** para representar conceptos del mundo real.
@@ -73,6 +76,8 @@ Tiene propiedades y funciones:
 **Dependencias:** componentes externos necesarios para que una app funcione
 
 **DOM:** representación estructurada del documento HTML que permite a programas y scripts acceder para manipular el contenido (estructura, estilo)
+
+**Coerción - casteo** convertir un valor de un tipo de dato a otro tipo. 🦖
 
 ## API:
  Interfaces de Programación de Aplicaciones, Permiten que diferentes componentes de software se comuniquen entre sí. 
@@ -120,3 +125,16 @@ Tiene propiedades y funciones:
 
 ## POST
 - Envía datos a un servicio web. 
+
+
+
+
+# ¿Que es JS?
+ Es un leguaje para *programar aplicaciones web*.
+ Da dinamismo a la web. 🦖
+
+ **Caracteristicas:**
+ - Dinámico.
+ - Interpretado.
+ - Orientado a objetos.
+ - Débilmente tipado.
