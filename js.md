@@ -18,9 +18,7 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 
 ## Template strings 
 - 🦖 En windows usar: alt+96 
-- 🧑‍💻 ```
-  const nombre="Chris"; console.log(`Hola ${nombre}`);
- ```
+- 🧑‍💻 `const nombre="Chris"; console.log(`Hola ${nombre}`);`
 
 ## Coerción - casteo 
 **conversión automática** ( implícita )  
