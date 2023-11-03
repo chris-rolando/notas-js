@@ -18,34 +18,36 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 
 ## Template strings 
 - 🦖 En windows usar: alt+96 
-- 🧑‍💻 
-  ```
-    const nombre="Chris"; console.log(`Hola ${nombre}`);
-  ```
+🧑‍💻 
+ ```
+  const nombre="Chris"; console.log(`Hola ${nombre}`);
+ ```
 
 ## Coerción - casteo 
 **conversión automática** ( implícita )  
 - 🧑‍💻 `const number = 10; const string = number; `
   
 **casteo** ( explícita )
-```
- const number = 10;
- const string = "10";
- const castedNumber = Number(string);
-```
+🧑‍💻 
+ ```
+  const number = 10;
+  const string = "10";
+  const castedNumber = Number(string);
+ ```
 
 ## Truthy & falsy
 Valores verdaderos y falsos:
 - 0, "", NaN, undefined o null.
-- Todo valor que no sea falsy es truthy 🦖
-    incluyendo las estructuras vacías de array y objetos.
+- Todo valor que no sea falsy es truthy 
+   incluyendo las estructuras vacías de array y objetos.
  
-## Bloque try-catch 🧑‍💻
-```
- try { //Código a probar
- } catch (error) { //Código en caso de error
- console.log(error);   }
-```
+## Bloque try-catch 
+🧑‍💻
+ ```
+  try { //Código a probar
+  } catch (error) { //Código en caso de error
+  console.log(error);   }
+ ```
 
 ## throw new Error 🧑‍💻
 ```
