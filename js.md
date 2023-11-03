@@ -201,7 +201,7 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 - **for** *Conocemos la cantidad de repeticiones* 
 - **for/in**  para iterar sobre las *propiedades enumerables de un objeto* 🦖
 - **for/of**  para iterar sobre los *elementos de una colección iterable* 🦖
-- **forEach()** función de callback que se utiliza para iterar sobre una colección de elementos y ejecutar una función para cada elemento de la colección. 🚩
+- **forEach()** función de callback que se utiliza para iterar sobre una colección de elementos y ejecutar una función para cada elemento de la colección.
 - **While** *No conocemos la cantidad* de repeticiones
 
 ---
@@ -316,10 +316,9 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 
 ---
 
-# Array 👑
-Es un tipo de objeto 🦖 
-Declarar usando const 🦖
-
+# 👑 Array 
+- Es un tipo de objeto 
+- Declarar usando const
 🧑‍💻
  ```
   let myInts = new Array();
@@ -338,7 +337,7 @@ Encontrar la *posición de un valor*, sino retornara -1.
 myInts.indexOf(6);
 
 **forEach()**
-Ejecutar una función para cada uno de los elementos. 🦖 
+Ejecutar una función para cada uno de los elementos. 
 **No retorna ningún valor.**
 🧑‍💻  
  ```
@@ -371,12 +370,12 @@ Cambian su estado actual
   console.log(myInts);// [ 0,6 ]
  ```
 
-### Más metodos
-**splice()** agrega o elimina elementos del array.
-**sort()** ordena los elementos del array.
-**reverse()** invierte el orden de los elementos del array.
-**fill()** rellena todos los elementos del array con un valor específico.
-**copyWithin()** copia una parte del array y la pega en otra parte del mismo array.
+### Más 
+- **splice()** agrega o elimina elementos del array.
+- **sort()** ordena los elementos del array.
+- **reverse()** invierte el orden de los elementos del array.
+- **fill()** rellena todos los elementos del array con un valor específico.
+- **copyWithin()** copia una parte del array y la pega en otra parte del mismo array.
 
 ## Métodos inmutables ( Crean un nuevo array )
 
@@ -421,12 +420,12 @@ Retornar un valor lógico verdadero si existe al menos un elemento que cumpla la
  ```
 
 ### Más metodos
-**concat()** une dos o más arrays en uno nuevo.
-**slice()** devuelve una copia de una parte del array original.
-**every()** devuelve true si todos los elementos pasan la condición en una función.
-**findIndex()** devuelve el índice del primer elemento que pasa la condición especificada en una función.
-**reduce()** aplica una función acumuladora a cada elemento del array, y devuelve un único valor.
-**reduceRight()** aplica una función acumuladora a cada elemento del array en orden inverso, y devuelve un único valor.
+- **concat()** une dos o más arrays en uno nuevo.
+- **slice()** devuelve una copia de una parte del array original.
+- **every()** devuelve true si todos los elementos pasan la condición en una función.
+- **findIndex()** devuelve el índice del primer elemento que pasa la condición especificada en una función.
+- **reduce()** aplica una función acumuladora a cada elemento del array, y devuelve un único valor.
+- **reduceRight()** aplica una función acumuladora a cada elemento del array en orden inverso, y devuelve un único valor.
 
 ## Array.from()
 *Crear un nuevo array* a partir de un *objeto iterable*. 
@@ -522,9 +521,26 @@ Puede ser útil para eliminar elementos null o undefined de un arreglo 🤖
 
 ---
 
+
+# Seleccionar elementos HTML
+- Obtener datos desde el HTML:
+- 🧑‍💻 `const input1 = document.querySelector("#id");`
+
+# Modificar elementos HTML
+- Modificar el DOM
+- 🧑‍💻 `h1.innerHTML = 'Practicando JS';`
+
+- Modificar atributos
+- 🧑‍💻 `h1.setAttribute('class', 'mySecondClass')`
+
+- Agregar una clase
+- 🧑‍💻 `h1.classList.add(mySecondClass);`
+
+---
+
 # Eventos
-Son el resultado de que algo que ocurre en el HTML
-Se usan para interactuar con el usuario, responder a cambios o validar acciones
+- Son el resultado de que algo que ocurre en el HTML
+- Se usan para interactuar con el usuario, responder a cambios o validar acciones
 addEventListener( nombre_del_evento, funcion )
 
 🧑‍💻
@@ -538,13 +554,13 @@ addEventListener( nombre_del_evento, funcion )
 **usar on** si el evento está "conectado" a un elemento. 🤖 
 
 **Event Handlers**
-"Manejadores de Eventos" son funciones que se ejecutan cuando ocurre un evento. 
-Se utilizan para responder al usuario y para el comportamiento de la página.
+- "Manejadores de Eventos" son funciones que se ejecutan cuando ocurre un evento. 
+- Se utilizan para responder al usuario y para el comportamiento de la página.
 
 ---
 
 # Maps
-Objeto que almacena pares de clave-valor
+- Objeto que almacena pares de clave-valor
 
  ## Ejemplo: almacenar datos de configuración
  🧑‍💻 JSON
@@ -555,7 +571,7 @@ Objeto que almacena pares de clave-valor
    }
   ```
  
- Podemos usar un Map para almacenar la configuración de la app
+ - Podemos usar un Map para almacenar la configuración de la app
  
  🧑‍💻
   ```
@@ -568,20 +584,17 @@ Objeto que almacena pares de clave-valor
    const baseUrl = config.get("baseUrl");
   ```
  
- Este código creará un Map con dos elementos:
- 
+ - Este código creará un Map con dos elementos:
   1. La clave apiKey con el valor "1234567890".
   2. La clave baseUrl con el valor "https://example.com".
 
 ---
 
-
-# 🤘 🐲 Closures 
-
-Es la combinación entre una función y el ámbito en el que esta fue declarada. 🦖
-Permite a las funciones recordar el estado de su entorno de ejecución.
-Se crea cuando una función es declarada dentro de otra función.
-Se usa para crear funciones genéricas y reutilizables. 🤖
+# Closures 
+- Es la combinación entre una función y el ámbito en el que esta fue declarada.
+- Permite a las funciones recordar el estado de su entorno de ejecución.
+- Se crea cuando una función es declarada dentro de otra función.
+- Se usa para crear funciones genéricas y reutilizables.
 🧑‍💻
  ```
   function counter() {
@@ -595,65 +608,15 @@ Se usa para crear funciones genéricas y reutilizables. 🤖
   console.log(myCounter()); // Output: 1
   console.log(myCounter()); // Output: 2
   console.log(myCounter()); // Output: 3
-
-  // otro ejemplo -> caso de uso 🐲
-
-  // function moneyBox(coins) {
-  //   let saveCoins = 0;
-  //   saveCoins += coins;
-  //   console.log(`MoneyBox: $${saveCoins}`);
-  // }
-
-  // moneyBox(5);
-  // moneyBox(5);
-
-  function moneyBox() {
-  let saveCoins = 0;
-  function countCoins(coins) {
-      saveCoins += coins;
-      console.log(`MoneyBox: $${saveCoins}`)
-  }
-  return countCoins;
-  }
-
-  const myMoneyBox = moneyBox();
-  myMoneyBox(5);
-  myMoneyBox(5);
-  myMoneyBox(15);
-
-  const moneyBoxAna = moneyBox();
-  moneyBoxAna(10);
-  moneyBoxAna(20);
-  moneyBoxAna(5);
-
-  //otro más
-
-  functionshoppingCart(){
-      let cart = [];
-      functionaddItems(item){
-          cart.push(item);
-          console.log(cart);
-      }
-      return addItems;
-  }
-
-  const amazon = shoppingCart();
-  amazon("Mouse");
-  amazon("Keyboard");
-  amazon(`Display 24"`);
+ 
  ```
 
 ## Ámbito léxico
-
 - Se refiere al alcance de una variable siguiendo la cadena de scopes.
 
 ## Higher-Order Functions
-
 - 🤖 Es una función que toma una o más funciones como argumentos y/o devuelve una función como resultado.
 - Permiten abstraer conceptos comunes en las operaciones de las funciones y permiten la reutilización de código.
-- map() recibe una función como argumento y la aplica a cada elemento de un array retornando un nuevo array.
-- Otros ejemplos son: filter(), reduce(), forEach(), sort() y find().
-
 - 🧑‍💻
   ```
   const numbers = [1, 2, 3, 4, 5];
@@ -666,13 +629,9 @@ Se usa para crear funciones genéricas y reutilizables. 🤖
 
 ---
 
-
----
-
-
-# 🤘 🐲 Asincronismo
-Las operaciones no bloquean el hilo de ejecución principal. 🤖
-Varias operaciones pueden ocurrir al mismo tiempo. 🦖
+# 🤘 Asincronismo
+- 🤖 Las operaciones no bloquean el hilo de ejecución principal. 
+- 🦖 Varias operaciones pueden ocurrir al mismo tiempo. 
 
 ## Promesas
 Permiten que una función asíncrona devuelva un valor que **estará disponible en el futuro**, 
@@ -835,21 +794,14 @@ Permiten que una función asíncrona devuelva un valor que **estará disponible 
 
 
 # Regular Expressions ( regex )
-
-Es una secuencia de caracteres para buscar y remplazar.
-
-**search()** Busca una cadena para un valor especificado y devuelve la posición de la coincidencia.
-
-**replace()** Reemplaza un valor con otro valor en una cadena.
-
----
-
-
+- Es una secuencia de caracteres para buscar y remplazar.
+- **search()** Busca una cadena para un valor especificado y devuelve la posición de la coincidencia.
+- **replace()** Reemplaza un valor con otro valor en una cadena.
 
 ---
 
 # JSON ( JavaScript Object Notation )
-Formato para **almacenar y transportar datos** desde el server.
+- Formato para **almacenar y transportar datos** desde el server.
 - "key":value
 🧑‍💻 ` '{"name":"Chris", "age":30}' `
 
@@ -898,51 +850,9 @@ Usar:
 
 ---
 
-# 🤘 🐲 Hands on
-
-## Incorporar JS al proyecto
-
-En el HTML agregar el link al **final**
-
-<script src="./script.js"></script>
-
-## Seleccionar elementos
-
-Obtener datos desde el HTML:
-
-- 🧑‍💻 `const input1 = document.querySelector("#calculo1");`
-
-## Modificar el HTML
-
-Modificar el DOM
-
-- 🧑‍💻 `h1.innerHTML = 'Practicando JS';`
-
-Modificar atributos
-
-- 🧑‍💻 `h1.setAttribute('class', 'mySecondClass')`
-
-Agregar una clase
-
-- 🧑‍💻 `h1.classList.add(mySecondClass);`
-
-addEventListener()
-
-🧑‍💻
-  ```
-  btn.addEventListener("click", sumarInputValues);
-
-  function sumarInputValues(event) {
-      pResult.innerText = "Resultado: " + input1.value + input2.value;;
-  }
-  ```
----
-
-
-
 # Display
-**innerHTML** modificar elementos HTML existentes 🚩
-**document.write()** agregar nuevo contenido 🦖
+- 🚩 **innerHTML** modificar elementos HTML existentes 
+- **document.write()** agregar nuevo contenido
 
 ---
 
