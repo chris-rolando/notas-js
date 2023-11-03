@@ -5,9 +5,8 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻
 # Intro
 
 ## Etiqueta script 
-Cargar el script al final. 🦖 
-
-🧑‍💻 `<script src="script.js"></script>`
+- 🦖 Cargar el script al final.  
+- 🧑‍💻 `<script src="script.js"></script>`
 
 ## Operadores
 Ver documentación 🤖
