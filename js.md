@@ -223,9 +223,8 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
 
 # 👑 Objetos
 
-**¿Que es un objeto?**
-
-En Javascript "Un objeto es una _colección de propiedades_".
+## ¿Que es un objeto?
+En Javascript "Un objeto es una **colección de propiedades**".
 
 **¿Que son propiedades?**
 
@@ -238,37 +237,38 @@ Las propiedades _definen las características_ del objeto.
 - _Usar const_ para declarlos.
 - En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones.
 
-**🧑‍💻 Crear objetos**
+**Crear objetos**
 
 1. 🚩 Usar object literal.
 2. Usar new Object().
 3. Usar un constructor.
 4. Usar Object.create().
-
-```
- const auto = {marca: "BMW", modelo: "X6"}; //1
-```
+🧑‍💻 
+ ```
+  const auto = {marca: "BMW", modelo: "X6"}; //1
+ ```
 **Acceder a los objetos**
 
 1. Notacion de corchetes: `objectName["propertyName"];`
 2. 🚩 Notacion de punto: `objectName.propertyName;`
 
+**Object.values()** convertir un objeto a arreglo.
+**JSON.stringify()** convertir un objeto a string.
 **🤖 Object.assign()** para copiar de un objeto a otro.
 🧑‍💻
-
-```
- const objeto1 = {a: 1, b: 2};
- const objeto2 = {c: 3, d: 4};
- const nuevoObjeto = Object.assign({}, objeto1, objeto2);
- console.log(nuevoObjeto); // Output: {a: 1, b: 2, c: 3, d: 4}
-```
+ ```
+  const objeto1 = {a: 1, b: 2};
+  const objeto2 = {c: 3, d: 4};
+  const nuevoObjeto = Object.assign({}, objeto1, objeto2);
+  console.log(nuevoObjeto); // Output: {a: 1, b: 2, c: 3, d: 4}
+ ```
 
 **Object.freeze()** para impedir que sea modificado
 **Object.getOwnProperties** retorna un array con todas las propiedades de un objeto que son de su propiedad (no heredadas 🦖)
 **Iterar un objeto**
 
-1. Bucle for..in
-2. 🚩 Bucle for..of
+1. 🚩 Bucle for..in
+2. Bucle for..of
 3. Object.keys() retorna un _array con las claves_.
 4. Object.values() retorna un _array con los valores_. (incluye valores heredados de los prototipos)
 5. Object.entries() retorna un _array con las parejas clave-valor_ enumerables del objeto.
@@ -283,6 +283,10 @@ Las propiedades _definen las características_ del objeto.
  console.log(objeto2.hasOwnProperty("c")); // Output: true
  console.log(objeto2.hasOwnProperty("a")); // Output: false
 ```
+## Set & get()
+Para validar los valores asignados a una propiedad. Por ejemplo, podemos usar un get para validar que un valor sea un número válido antes de asignarlo a una propiedad.
+Para convertir los valores antes de asignarlos a una propiedad. Por ejemplo, podemos usar un set para convertir un valor de cadena a un número antes de asignarlo a una propiedad.
+Para guardar el estado de una propiedad en una variable privada.
 
 ---
 
