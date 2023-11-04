@@ -1,22 +1,21 @@
 # Apuntes 🤘
-nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻 \ key: 👑
 
-# DEV
-**Algoritmo:** instrucciones ordenadas para resolver un problema
+# Conceptos importantes
+**Algoritmo:** instrucciones ordenadas para resolver un problema.
 
-**Lenguajes de programación:** reglas para dar instrucciones al PC
+**Lenguajes de programación:** reglas para dar instrucciones al PC:
   *Bajo nivel*
-  - Lenguaje nativo del PC, es decir pogramar componentes
+  - Lenguaje nativo del PC, es decir pogramar componentes.
   *Alto nivel*
-  - Lenguaje entendible, es decir programar aplicaciones
+  - Lenguaje entendible, es decir programar aplicaciones.
   *Interpretado*
-  - El codigo se ejecuta por un intérprete en tiempo de ejecución
+  - El codigo se ejecuta por un intérprete en tiempo de ejecución.
   *Compilado*
-  - El codigo se traduce o compila a codigo maquina
+  - El codigo se traduce o compila a codigo maquina.
 
-**Variable:** espacio reservado en memoria para guardar info
+**Variable:** espacio reservado en memoria para guardar info.
 
-**Función:** bloque de código para hacer una tarea
+**Función:** bloque de código para hacer una tarea.
 Una función puede:
  1. Ser llamada o invocada.
  2. Recibir parámetros - argumentos.
@@ -27,24 +26,39 @@ Una función puede:
 
 **Objetos:** es una representación del mundo real. 
 Es una estructura de datos formada por clave:valor
-Tiene propiedades y funciones:
-1. Propiedades o atributos: 
- - Los datos o (sustantivos)
- - Características o atributos
- - Describen su estado
-2. Funciones o comportamientos: 
- - Los metodos o (verbos)
- - Definen el comportamiento
- - Realizan manipulaciones sobre los datos del objeto
-
+- Tiene propiedades y funciones:
+ 1. Propiedades o atributos: describen su estado.
+  - Los datos o (sustantivos)
+  - Características o atributos
+ 2. Funciones o comportamientos: realizan manipulaciones.
+  - Los metodos o (verbos)
+  - Definen el comportamiento
+  
 **Clases:** es una plantilla para crear objetos
 
-**Eventos** acciòn o suceso que pasa en la app
+**Eventos** acción o suceso que pasa en la app
 
-## ¿Que es POO?
+**IDE:**
+ Integrated Development Environment o _Entorno de Desarrollo Integrado_
+ 1. Visual studio: entorno completo
+ 2. VS Code: (editor de codigo) entorno simple
+
+**Refactorización:** proceso para reestructurar el código sin cambiar su funcionalidad.
+
+**Garbage collector** Se encarga de liberar la memoria que ya no se está utilizando.
+
+**Framework** conjunto de buenas practicas para resolver problemas.
+
+**Dependencias** componentes externos necesarios para que una app funcione
+
+**DOM** representación estructurada del documento HTML que permite a programas y scripts acceder para manipular el contenido (estructura, estilo)
+
+**Coerción - casteo** convertir un valor de un tipo de dato a otro tipo.
+
+# POO
  Programacion Orientada a Objetos, es un paradigma de programación que se **enfoca en el uso de objetos** para representar conceptos del mundo real.
  
- ### Elementos:
+ ## Elementos de la POO:
   - Clases
   - Propiedades
   - Métodos
@@ -53,7 +67,7 @@ Tiene propiedades y funciones:
   **Metodo Constructor:** subrutina para inicializar un objeto cuando se crea una instancia de una clase. 
   **¿Metodo vs función?** EN JS, un método es una función que está asociada a un objeto. Cada objeto tiene sus propios métodos, que se pueden usar para interactuar con el objeto.
  
- ### Pilares:
+ ## Pilares:
   - Encapsulamiento
   - Abstracción
   - Herencia
@@ -64,24 +78,7 @@ Tiene propiedades y funciones:
   **Herencia:** una clase ( hijo ) herede las propiedades y métodos de otra clase ( padre ).
   **Polimorfismo:** dos objetos de diferentes clases tengan el mismo comportamiento.
 
-## IDE:
- Integrated Development Environment o **Entorno de Desarrollo Integrado**
- 1. Visual studio: entorno completo
- 2. VS Code: (editor de codigo) entorno simple
-
-**Refactorización:** proceso para reestructurar el código sin cambiar su funcionalidad.
-
-**¿Garbage collector?** Se encarga de liberar la memoria que ya no se está utilizando.
-
-**Framework:** conjunto de buenas practicas para resolver problemas.
-
-**Dependencias:** componentes externos necesarios para que una app funcione
-
-**DOM:** representación estructurada del documento HTML que permite a programas y scripts acceder para manipular el contenido (estructura, estilo)
-
-**Coerción - casteo** convertir un valor de un tipo de dato a otro tipo. 🦖
-
-## API:
+# API:
  Interfaces de Programación de Aplicaciones, Permiten que diferentes componentes de software se comuniquen entre sí. 
 
  - Una API es como una promesa:
@@ -108,7 +105,7 @@ Tiene propiedades y funciones:
 1. JSON
 2. YAML (Yet Another Markup Language, Lenguaje de Marcado Adicional)
 
-## JSON (JavaScript Object Notation)
+# JSON (JavaScript Object Notation)
 - Admite algunos elementos de diferentes tipos de datos.
     1. Strings (encerradas entre comillas)
     2. Números
@@ -128,11 +125,8 @@ Tiene propiedades y funciones:
 ## POST
 - Envía datos a un servicio web. 
 
-
-
-
 # ¿Que es JS?
- Es un leguaje para *programar aplicaciones web*.
+ Es un leguaje para _programar aplicaciones web_.
  Da dinamismo a la web. 🦖
 
  **Caracteristicas:**
@@ -142,5 +136,7 @@ Tiene propiedades y funciones:
  - Débilmente tipado.
 
  **Cargar script** 
-- 🦖 Cargar el script al final.  
-- 🧑‍💻 `<script src="script.js"></script>`
+ - 🦖 Cargar el script al final.  
+ - 🧑‍💻 `<script src="script.js"></script>`
+
+ **Primitive value** Valor que no tiene properties o methods.

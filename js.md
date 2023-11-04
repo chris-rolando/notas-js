@@ -13,6 +13,7 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻 \ key: 👑
 ## Template strings
 
 🚩 En windows usar: alt+96
+
 - 🧑‍💻 `const nombre="Chris"; console.log(`Hola ${nombre}`);`
 
 ## Coerción - casteo
@@ -34,11 +35,13 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻 \ key: 👑
 ## Truthy & falsy
 
 Valores verdaderos y falsos: 0, "", NaN, undefined o null.
+
 - Todo valor que no sea falsy es truthy
 
 ## Debugging
 
 🚩 Se utiliza para **detener la ejecución** del código en un punto específco.
+
 - 🧑‍💻
 
 ```
@@ -59,6 +62,7 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 ## Funcion Declarativa
 
 🦖 Funcion "normal"
+
 - 🧑‍💻
 
 ```
@@ -76,6 +80,7 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 ## Funcion de Expresión ( anonima )
 
 🦖 Se definen "como una expresión!"
+
 - Puede ser asignada a una variable
 - 🤖 Usar para:
 
@@ -102,6 +107,7 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 ## IIFE (Immediately Invoked Function Expression)
 
 🦖 Función que se autoejecuta inmediatamente después de ser definida
+
 - Es anónima!
 - No se puede reutilizar!
 - 🧑‍💻
@@ -115,6 +121,7 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 ## 🚩 Funcion Flecha - Arrow function
 
 🦖 Funciones de una sola línea
+
 - 🧑‍💻 (argumentos) => expresión que se evalúa y se devuelve
 
 ```
@@ -135,8 +142,7 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 
 # Scope ( Ambito de aplicacion )
 
-- Determina el alcance o **accesibilidad que tiene cada variable**.
-- tipos ( importancia ):
+Determina el alcance o **accesibilidad que tiene cada variable**.
 
 1. Function scope
 2. Global scope
@@ -146,14 +152,15 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 
 **Block scope:**
 
-- Las variables pueden ser accedidas desde el bloque.
-- El codigo que está dentro de {}.
+- 🦖 Las variables pueden ser accedidas desde el bloque.
+- 🦖 El codigo que está dentro de {}.
 
 ---
 
 # Hoisting ( Elevación )
 
-- Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**.
+Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**.
+
 - 🧑‍💻
 
 ```
@@ -166,12 +173,12 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
  }
 ```
 
-- name y greet() se usan antes de ser declaradas. **Esto produce un error?** _No_, se "hoistea" la declaración.
+- 🦖 name y greet() se usan antes de ser declaradas. **Esto produce un error?** _No_, se "hoistea" la declaración.
 
 ## Más
 
-- 🦖 Solo funciona con las declaraciones de variables y funciones.
-- 🤖 Si es posible, tratar de declarar variables arriba.
+- Solo funciona con las declaraciones de variables y funciones.
+- 🤖 Tratar de declarar variables arriba.
 
 ---
 
@@ -196,15 +203,19 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 
 - **if** Seleccion _unica_
 - **switch** Selección _multiple_
-- **Operador ternario**
+- 🚩 **Operador ternario**
   Evaluar una _condición y devolver un valor_ en función del resultado
 
   - 🧑‍💻 condicion ? valor_si_verdadero : valor_si_falso;
     `const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
 
+---
+
+# Iterar
+
 - **for** _Conocemos la cantidad de repeticiones_
-- **for/in** para iterar sobre las _propiedades enumerables de un objeto_ 🦖
-- **for/of** para iterar sobre los _elementos de una colección iterable_ 🦖
+- **for..in** para iterar sobre las _propiedades_ enumerables de un objeto 🦖
+- **for..of** para iterar sobre los _elementos_ de una colección iterable 🦖
 - **forEach()** función de callback que se utiliza para iterar sobre una colección de elementos y ejecutar una función para cada elemento de la colección.
 - **While** _No conocemos la cantidad_ de repeticiones
 
@@ -212,43 +223,37 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 
 # 👑 Objetos
 
-## 🤘 ¿Que es un objeto?
+**¿Que es un objeto?**
 
-"Un objeto es una colección de propiedades".
+En Javascript "Un objeto es una _colección de propiedades_".
 
-## ¿Propiedades?
+**¿Que son propiedades?**
 
-Las propiedades definen las características del objeto.
-Son un conjunto de clave y valor.
+Las propiedades _definen las características_ del objeto.
 
-## 🦖 Notas:
+- 🤖 Son un conjunto de clave y valor.
+
+**Notas:**
 
 - _Usar const_ para declarlos.
-- _Todo es un objeto_ excepto por los primitivos y las funciones.
+- En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones.
 
-## 🧑‍💻 Code
+**🧑‍💻 Crear objetos**
+
+1. 🚩 Usar object literal.
+2. Usar new Object().
+3. Usar un constructor.
+4. Usar Object.create().
 
 ```
- const auto = { marca: "BMW", modelo: "X6" };
+ const auto = {marca: "BMW", modelo: "X6"}; //1
 ```
-
-## Acceder a los objetos
+**Acceder a los objetos**
 
 1. Notacion de corchetes: `objectName["propertyName"];`
-2. Notacion de punto: `objectName.propertyName;`
+2. 🚩 Notacion de punto: `objectName.propertyName;`
 
-## Crear objetos
-
-🧑‍💻
-
-```
- const miAuto = new auto("Toyota", "Corolla");
- const otroAuto = new auto("Tesla", "Model 3");
-```
-
-## Objetos literales
-
-**Object.assign()** para copiar de un objeto a otro.
+**🤖 Object.assign()** para copiar de un objeto a otro.
 🧑‍💻
 
 ```
@@ -259,59 +264,14 @@ Son un conjunto de clave y valor.
 ```
 
 **Object.freeze()** para impedir que sea modificado
-🧑‍💻
+**Object.getOwnProperties** retorna un array con todas las propiedades de un objeto que son de su propiedad (no heredadas 🦖)
+**Iterar un objeto**
 
-```
- const objeto = {a: 1, b: 2};
- Object.freeze(objeto);
- objeto.a = 3;
- console.log(objeto.a); // Output: 1
-```
-
-**Object.getOwnProperties** retorna un array con todas las propiedades de un objeto que son de su propiedad (no heredadas)
-🧑‍💻
-
-```
- const objeto1 = {a: 1, b: 2};
- const objeto2 = Object.create(objeto1);
- objeto2.c = 3;
- console.log(Object.getOwnProperties(objeto2)); // Output: ["c"]
-```
-
-**Iterar** retorna un array con las keys del objeto
-
-1. Bucle for-in.
-2. Object.keys() & un bucle for-of
-   🧑‍💻
-
-```
- const objeto = {a: 1, b: 2, c: 3};
- const propiedades = Object.keys(objeto);
-
- for (let propiedad of propiedades) {
-  console.log(propiedad); // Output: "a", "b", "c"
- }
-```
-
-**Object.values()** retorna un array con los valores de todas las propiedades de un objeto, incluyendo las heredadas
-🧑‍💻
-
-```
- const objeto1 = {a: 1, b: 2};
- const objeto2 = Object.create(objeto1);
- objeto2.c = 3;
- console.log(Object.values(objeto2)); // Output: [3, 1, 2]
-```
-
-**Object.entries()** retorna un array con los pares clave-valor de todas las propiedades de un objeto, incluyendo las heredadas.
-🧑‍💻
-
-```
- const objeto1 = {a: 1, b: 2};
- const objeto2 = Object.create(objeto1);
- objeto2.c = 3;
- console.log(Object.entries(objeto2)); // Output: [["c", 3], ["a", 1], ["b", 2]]
-```
+1. Bucle for..in
+2. 🚩 Bucle for..of
+3. Object.keys() retorna un _array con las claves_.
+4. Object.values() retorna un _array con los valores_. (incluye valores heredados de los prototipos)
+5. Object.entries() retorna un _array con las parejas clave-valor_ enumerables del objeto.
 
 **hasOwnProperty()** retorna un booleano indicando si un objeto tiene una propiedad específica que es de su propiedad (no heredada)
 🧑‍💻
