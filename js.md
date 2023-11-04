@@ -223,64 +223,62 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
 
 # 👑 Objetos
 ## ¿Que es un objeto?
- En Javascript "Un objeto es una **colección de propiedades**".
+En Javascript "Un objeto es una **colección de propiedades**".
  
- **¿Que son propiedades?**
- Las propiedades **definen las características** del objeto.
+**¿Que son propiedades?** Las propiedades **definen las características** del objeto.
  
- **🦖**
+## 🦖 Notas:
  - _Usar const_ para declarlos.
  - 🤖 En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones.
 
 ## Crear objetos
-1. 🚩 Usar object literal.
-2. Usar new Object().
-3. Usar un constructor.
-4. Usar Object.create().
+1. 🚩 object literal
+2. new Object()
+3. función constructor
+4. Object.create()
 🧑‍💻 
  ```
-  const auto = {marca: "BMW", modelo: "X6"}; //1
- ```
-**Acceder a los objetos**
-
-1. Notacion de corchetes: `objectName["propertyName"];`
-2. 🚩 Notacion de punto: `objectName.propertyName;`
-
-**Object.values()** convertir un objeto a arreglo.
-**JSON.stringify()** convertir un objeto a string.
-**🤖 Object.assign()** para copiar de un objeto a otro.
-🧑‍💻
- ```
-  const objeto1 = {a: 1, b: 2};
-  const objeto2 = {c: 3, d: 4};
-  const nuevoObjeto = Object.assign({}, objeto1, objeto2);
-  console.log(nuevoObjeto); // Output: {a: 1, b: 2, c: 3, d: 4}
+  const auto = {marca: "BMW", modelo: "X6"}; //object literal
  ```
 
-**Object.freeze()** para impedir que sea modificado
-**Object.getOwnProperties** retorna un array con todas las propiedades de un objeto que son de su propiedad (no heredadas 🦖)
-**Iterar un objeto**
+## Acceder a los objetos
+1. 🚩 Notación de punto: `objectName.propertyName;`
+2. Notación de corchetes: `objectName["propertyName"];`
+
+## Iterar objetos
 
 1. 🚩 Bucle for..in
 2. Bucle for..of
 3. Object.keys() retorna un _array con las claves_.
 4. Object.values() retorna un _array con los valores_. (incluye valores heredados de los prototipos)
-5. Object.entries() retorna un _array con las parejas clave-valor_ enumerables del objeto.
+5. Object.entries() retorna un _array con las parejas clave-valor_ enumerables del objeto
+
+## Trabajando con objetos
+**Object.assign()** para copiar de un objeto a otro objeto.
+
+🧑‍💻
+ ```
+  const objeto1 = {a: 1, b: 2}; const objeto2 = {c: 3, d: 4};
+  const nuevoObjeto = Object.assign({}, objeto1, objeto2);
+  console.log(nuevoObjeto); // Output: {a: 1, b: 2, c: 3, d: 4}
+ ```
+
+**Object.values()** convertir un objeto a arreglo.
+
+**JSON.stringify()** convertir un objeto a string.
+
+**Object.freeze()** impedir que sea modificado.
+
+**Object.defineProperty()** controlar el acceso a las propiedades y modificar su comportamiento.
+
+**Object.getOwnProperties** retorna un array con todas las propiedades de un objeto que son de su propiedad (no heredadas)
 
 **hasOwnProperty()** retorna un booleano indicando si un objeto tiene una propiedad específica que es de su propiedad (no heredada)
-🧑‍💻
 
-```
- const objeto1 = {a: 1, b: 2};
- const objeto2 = Object.create(objeto1);
- objeto2.c = 3;
- console.log(objeto2.hasOwnProperty("c")); // Output: true
- console.log(objeto2.hasOwnProperty("a")); // Output: false
-```
-## Set & get()
-Para validar los valores asignados a una propiedad. Por ejemplo, podemos usar un get para validar que un valor sea un número válido antes de asignarlo a una propiedad.
-Para convertir los valores antes de asignarlos a una propiedad. Por ejemplo, podemos usar un set para convertir un valor de cadena a un número antes de asignarlo a una propiedad.
-Para guardar el estado de una propiedad en una variable privada.
+**Métodos set() & get()** métodos especiales para:
+- Validar los valores asignados a una propiedad. 
+- Convertir los valores antes de asignarlos a una propiedad. 
+- Guardar el estado de una propiedad en una variable privada.
 
 ---
 
