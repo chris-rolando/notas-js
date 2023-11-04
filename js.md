@@ -222,15 +222,12 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
 ---
 
 # 👑 Objetos
-
 ## ¿Que es un objeto?
 En Javascript "Un objeto es una **colección de propiedades**".
-
 **¿Que son propiedades?**
+Las propiedades **definen las características** del objeto.
 
-Las propiedades _definen las características_ del objeto.
-
-- 🤖 Son un conjunto de clave y valor.
+🤖 Son un conjunto de clave y valor.
 
 **Notas:**
 
