@@ -1,5 +1,7 @@
-# Conceptos 🤘
+# Apuntes 🤘
+nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻 \ key: 👑
 
+# DEV
 **Algoritmo:** instrucciones ordenadas para resolver un problema
 
 **Lenguajes de programación:** reglas para dar instrucciones al PC
@@ -138,3 +140,7 @@ Tiene propiedades y funciones:
  - Interpretado.
  - Orientado a objetos.
  - Débilmente tipado.
+
+ **Cargar script** 
+- 🦖 Cargar el script al final.  
+- 🧑‍💻 `<script src="script.js"></script>`
