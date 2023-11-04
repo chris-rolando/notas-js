@@ -223,16 +223,18 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
 
 # 👑 Objetos
 ## ¿Que es un objeto?
-En Javascript "Un objeto es una **colección de propiedades**".
-**¿Que son propiedades?**
-Las propiedades **definen las características** del objeto.
-
-🤖 Son un conjunto de clave y valor.
-
-**Notas:**
-
-- _Usar const_ para declarlos.
-- En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones.
+ En Javascript "Un objeto es una **colección de propiedades**".
+ 
+ **¿Que son propiedades?**
+ Las propiedades **definen las características** del objeto.
+ 
+ **Notas:**
+ 
+ 🤖 Son un conjunto de clave y valor.
+ 
+ _Usar const_ para declarlos.
+ 
+ En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones.
 
 **Crear objetos**
 
