@@ -228,16 +228,11 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
  **¿Que son propiedades?**
  Las propiedades **definen las características** del objeto.
  
- **Notas:**
- 
- 🤖 Son un conjunto de clave y valor.
- 
- _Usar const_ para declarlos.
- 
- En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones.
+ **🦖**
+ - _Usar const_ para declarlos.
+ - 🤖 En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones.
 
-**Crear objetos**
-
+## Crear objetos
 1. 🚩 Usar object literal.
 2. Usar new Object().
 3. Usar un constructor.
