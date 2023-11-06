@@ -34,14 +34,14 @@ Es una estructura de datos formada por clave:valor
   - Los metodos o (verbos)
   - Definen el comportamiento
   
-**Clases:** es una plantilla para crear objetos
+**Clases:** es una "plantilla" para crear objetos
 
 **Eventos** acción o suceso que pasa en la app
 
 **IDE:**
  Integrated Development Environment o _Entorno de Desarrollo Integrado_
- 1. Visual studio: entorno completo
- 2. VS Code: (editor de codigo) entorno simple
+ 1. Visual studio es un entorno completo
+ 2. VS Code es un entorno simple (editor de codigo).
 
 **Refactorización:** proceso para reestructurar el código sin cambiar su funcionalidad.
 
@@ -65,7 +65,7 @@ Es una estructura de datos formada por clave:valor
   - Objetos
  
   **Metodo Constructor:** subrutina para inicializar un objeto cuando se crea una instancia de una clase. 
-  **¿Metodo vs función?** EN JS, un método es una función que está asociada a un objeto. Cada objeto tiene sus propios métodos, que se pueden usar para interactuar con el objeto.
+  **¿Metodo vs función?** En Javascript, un método es una función que está asociada a un objeto. - Cada objeto tiene sus propios métodos, que se pueden usar para interactuar con el objeto.
  
  ## Pilares:
   - Encapsulamiento
@@ -73,10 +73,10 @@ Es una estructura de datos formada por clave:valor
   - Herencia
   - Polimorfismo
  
-  **Encapsular:** consiste en ocultar los detalles internos, proporcionando una interfaz simplificada.
-  **Abstracción:** enfocarse en el comportamiento, sin preocuparse por su implementación interna.
-  **Herencia:** una clase ( hijo ) herede las propiedades y métodos de otra clase ( padre ).
-  **Polimorfismo:** dos objetos de diferentes clases tengan el mismo comportamiento.
+  1. **Encapsular:** consiste en ocultar los detalles internos, proporcionando una interfaz simplificada.
+  2. **Abstracción:** enfocarse en el comportamiento, sin preocuparse por su implementación interna.
+  3. **Herencia:** una clase ( hijo ) herede las propiedades y métodos de otra clase ( padre ).
+  4. **Polimorfismo:** dos objetos de diferentes clases tengan el mismo comportamiento.
 
 # API:
  Interfaces de Programación de Aplicaciones, Permiten que diferentes componentes de software se comuniquen entre sí. 
@@ -139,4 +139,8 @@ Es una estructura de datos formada por clave:valor
  - 🦖 Cargar el script al final.  
  - 🧑‍💻 `<script src="script.js"></script>`
 
- **Primitive value** Valor que no tiene properties o methods.
+ **Var** No Usar, da _problemas con el scope_ global.
+
+ **Primitive value** Valor que no tiene propiedades o métodos.
+ 
+ **Modo estricto:** reglas y características que proporcionan _mayor seguridad y control_ en el código.

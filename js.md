@@ -5,26 +5,24 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻 \ key: 👑
 # Intro
 
 ## Operadores
-
-- 🚩 Igualdad "=="
-- 🚩 Mismo valor y tipo "==="
-- 🚩 Diferente valor o tipo: !==
+- Igualdad "=="
+- Mismo valor y tipo "==="
+- Diferente valor o tipo: !==
 
 ## Template strings
-
 🚩 En windows usar: alt+96
 
-- 🧑‍💻 `const nombre="Chris"; console.log(`Hola ${nombre}`);`
+🧑‍💻 `const nombre="Chris"; console.log(`Hola ${nombre}`);`
 
 ## Coerción - casteo
 
 **conversión automática** ( implícita )
 
-- 🧑‍💻 `const number = 10; const string = number; `
+🧑‍💻 `const number = 10; const string = number; `
 
 **casteo** ( explícita )
 
-- 🧑‍💻
+🧑‍💻
 
 ```
  const number = 10;
@@ -34,26 +32,80 @@ nota: 🦖 \ hack: 🤖 \ bookmark: 🚩 \ code: 🧑‍💻 \ key: 👑
 
 ## Truthy & falsy
 
-Valores verdaderos y falsos: 0, "", NaN, undefined o null.
-
-- Todo valor que no sea falsy es truthy
+🦖 Valores verdaderos y falsos: 0, "", NaN, undefined o null. Todo valor que no sea falsy es truthy.
 
 ## Debugging
 
-🚩 Se utiliza para **detener la ejecución** del código en un punto específco.
+Usar para **detener la ejecución** del código.
 
-- 🧑‍💻
+🧑‍💻
 
 ```
  let numero = 5;
  debugger;
 ```
 
-## Más
+## typeof
 
-- **Var** No Usar, da _problemas con el scope_ global.
-- **Modo estricto:** reglas y características que proporcionan _mayor seguridad y control_ en el código.
-- 🤖 **this:** se refiere al _objeto actual_ en el que se está ejecutando el código. ( depende de su contexto )
+Se utiliza para **retornar el tipo de datos** de un valor.
+
+🧑‍💻
+
+```
+ const value = 25;
+
+ if (typeof value === "number") {
+   // Realizar la operación
+ } else {
+   // Lanzar un error
+ }
+```
+
+## Scope ( Ambito de aplicacion )
+
+Determina el alcance o **accesibilidad que tiene cada variable**.
+
+1. Function scope
+2. Global scope
+3. Block scope
+
+### Notas
+
+**Block scope:**
+
+- 🦖 Las variables pueden ser accedidas desde el bloque.
+- 🦖 El codigo que está dentro de {}.
+
+## Hoisting ( Elevación )
+
+Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**.
+
+🧑‍💻
+
+```
+ console.log(name); // undefined
+ var name = "Bard";
+
+ console.log(greet()); // "Hola, Bard!"
+ function greet() {
+  return "Hola, Bard!";
+ }
+```
+
+- 🦖 name y greet() se usan antes de ser declaradas. **Esto produce un error?** _No_, se "hoistea" la declaración.
+
+### Notas
+
+- Solo funciona con las declaraciones de variables y funciones.
+- 🤖 Tratar de declarar variables arriba.
+
+## 👑 this 
+🤖 Se refiere al _objeto actual_ en el que se está ejecutando el código.
+  
+**Se refiere a**  
+- En funciones: al objeto en el que se define la función.
+- En objetos: al objeto en sí.
+- En constructores: al nuevo objeto que se está creando.
 
 ---
 
@@ -66,11 +118,11 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 - 🧑‍💻
 
 ```
- function sumar() {
+  function sumar() {
      return 5 + 3;
  }
- sumar(5,3);
- // con parametros opcionales o inicializados
+  sumar(5,3);
+ // 🤖 con parametros opcionales o default
  function resta( a, b=3 ) {
      return a - b;
  }
@@ -79,11 +131,9 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 
 ## Funcion de Expresión ( anonima )
 
-🦖 Se definen "como una expresión!"
+🦖 Se definen "como una expresión!" Se puede asignar a una variable.
 
-- Puede ser asignada a una variable
-- 🤖 Usar para:
-
+🤖 Usar para:
 1.  Tareas cortas
 2.  Para funciones que solo se necesitan en un lugar
 3.  Como parámetros de otras funciones.
@@ -110,19 +160,19 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 
 - Es anónima!
 - No se puede reutilizar!
-- 🧑‍💻
 
+🧑‍💻
 ```
  (function () {
  console.log("Soy una funcion");
  })();
 ```
 
-## 🚩 Funcion Flecha - Arrow function
+## Funcion Flecha - Arrow function
 
 🦖 Funciones de una sola línea
 
-- 🧑‍💻 (argumentos) => expresión que se evalúa y se devuelve
+🧑‍💻 (argumentos) => expresión que se evalúa y se devuelve
 
 ```
  const nombre = "Chris";
@@ -131,71 +181,43 @@ Valores verdaderos y falsos: 0, "", NaN, undefined o null.
 
 ```
 
+## Métodos 
+**Call()** Se usa para: llamar a una función con un valor específico para this. (objeto en diferente contexto) o llamar a una función con un número variable de argumentos. 
+
+**Apply()** Se usa para: llamar a una función con un valor específico para this y con un array de argumentos o para llamar a una función con un array de argumentos que se genera dinámicamente. 
+
+**Bind()** Se usa para: crear nuevas funciones con un valor específico para this o con una lista de argumentos predefinida.
+
+## Closures
+"Un closure en JavaScript es una función que tiene acceso al ámbito léxico en el que fue creada, incluso después de que la función que lo creó haya cerrado. Esto significa que una función interna puede acceder a las variables declaradas en la función externa, incluso si la función externa ya ha terminado de ejecutarse."
+- Permite a las funciones recordar el estado de su entorno de ejecución.
+- Se crea cuando una función es declarada dentro de otra función.
+- Se usa para crear funciones genéricas y reutilizables.
+
+**¿Que es Ámbito léxico?** Se refiere al alcance de una variable siguiendo la cadena de scopes.
+
+Se usa para:
+- Crear funciones privadas
+- Crear funciones que tengan acceso a datos que se inicializan en el momento de la creación de la función
+- Crear funciones que devuelvan otras funciones
+- Crear funciones que modifiquen el comportamiento de otras funciones
+
+### Higher-Order Functions
+
+- 🤖 Es una función que toma una o más funciones como argumentos y/o devuelve una función como resultado.
+- Permiten abstraer conceptos comunes en las operaciones de las funciones y permiten la reutilización de código.
+
 ## Más
 
 - **Funciones declarativas se mueven al principio** del ámbito por lo que se pueden llamar antes de su definición.
-- **Funciones de expresión NO se elevan** por lo que solo se pueden llamar después de su definición.
+- 🤖 **Funciones de expresión y flecha NO se elevan** por lo que solo se pueden llamar después de su definición.
 - **Funciones declarativas tienen alcance de función**.
 - **Funciones de expresión tienen alcance de variable**.
-
----
-
-# Scope ( Ambito de aplicacion )
-
-Determina el alcance o **accesibilidad que tiene cada variable**.
-
-1. Function scope
-2. Global scope
-3. Block scope
-
-## Más
-
-**Block scope:**
-
-- 🦖 Las variables pueden ser accedidas desde el bloque.
-- 🦖 El codigo que está dentro de {}.
-
----
-
-# Hoisting ( Elevación )
-
-Se da cuando las declaraciones de variables y funciones son **desplazadas a la parte superior del scope más cercano**.
-
-- 🧑‍💻
-
-```
- console.log(name); // undefined
- var name = "Bard";
-
- console.log(greet()); // "Hola, Bard!"
- function greet() {
-  return "Hola, Bard!";
- }
-```
-
-- 🦖 name y greet() se usan antes de ser declaradas. **Esto produce un error?** _No_, se "hoistea" la declaración.
-
-## Más
-
-- Solo funciona con las declaraciones de variables y funciones.
-- 🤖 Tratar de declarar variables arriba.
-
----
-
-# typeof
-
-- Se utiliza para **retornar el tipo de datos** de un valor.
-- 🧑‍💻
-
-```
- const value = 25;
-
- if (typeof value === "number") {
-   // Realizar la operación
- } else {
-   // Lanzar un error
- }
-```
+- Parámetro variables que se declaran en la definición de una función.
+  - 🦖 **Rest** parámetro que puede tomar un número indefinido de argumentos. Ejemplo: (...numbers), considerarlo como un array. 
+- Argumento valores que se pasan a una función cuando se invoca.
+- Los argumentos se pasan por valor.
+- 🚩 Los objetos se pasan por referencia.
 
 ---
 
@@ -204,16 +226,17 @@ Se da cuando las declaraciones de variables y funciones son **desplazadas a la p
 - **if** Seleccion _unica_
 - **switch** Selección _multiple_
 - 🚩 **Operador ternario**
+
   Evaluar una _condición y devolver un valor_ en función del resultado
 
-  - 🧑‍💻 condicion ? valor_si_verdadero : valor_si_falso;
+  🧑‍💻 condicion ? valor_si_verdadero : valor_si_falso;
     `const result2 = number > 10 ? "Mayor que 10" : "Menor o igual que 10";`
 
 ---
 
 # Iterar
 
-- **for** _Conocemos la cantidad de repeticiones_
+- **for** _Conocemos la cantidad_ de repeticiones
 - **for..in** para iterar sobre las _propiedades_ enumerables de un objeto 🦖
 - **for..of** para iterar sobre los _elementos_ de una colección iterable 🦖
 - **forEach()** función de callback que se utiliza para iterar sobre una colección de elementos y ejecutar una función para cada elemento de la colección.
@@ -228,13 +251,14 @@ En Javascript "Un objeto es una **colección de propiedades**".
 **¿Que son propiedades?** Las propiedades **definen las características** del objeto.
  
 ## 🦖 Notas:
- - _Usar const_ para declarlos.
- - 🤖 En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones.
+- Clave: valor
+- _Usar const_ para declarlos
+- 🤖 En Javascript _TODO es un objeto_ excepto por los primitivos y las funciones
 
 ## Crear objetos
 1. 🚩 object literal
-2. new Object()
-3. función constructor
+2. new Object() 
+3. Métodos Constructores
 4. Object.create()
 🧑‍💻 
  ```
@@ -247,13 +271,13 @@ En Javascript "Un objeto es una **colección de propiedades**".
 
 ## Iterar objetos
 
-1. 🚩 Bucle for..in
 2. Bucle for..of
+1. 🚩 Bucle for..in
 3. Object.keys() retorna un _array con las claves_.
 4. Object.values() retorna un _array con los valores_. (incluye valores heredados de los prototipos)
 5. Object.entries() retorna un _array con las parejas clave-valor_ enumerables del objeto
 
-## Trabajando con objetos
+## 🦖 Trabajando con objetos
 **Object.assign()** para copiar de un objeto a otro objeto.
 
 🧑‍💻
@@ -271,16 +295,59 @@ En Javascript "Un objeto es una **colección de propiedades**".
 
 **Object.defineProperty()** controlar el acceso a las propiedades y modificar su comportamiento.
 
-**Object.getOwnProperties** retorna un array con todas las propiedades de un objeto que son de su propiedad (no heredadas)
+**Object.getOwnProperties** retorna un array con todas las propiedades de un objeto.
 
-**hasOwnProperty()** retorna un booleano indicando si un objeto tiene una propiedad específica que es de su propiedad (no heredada)
+**hasOwnProperty()** retorna un booleano indicando si un objeto tiene una propiedad.
 
 **Métodos set() & get()** métodos especiales para:
-- Validar los valores asignados a una propiedad. 
-- Convertir los valores antes de asignarlos a una propiedad. 
-- Guardar el estado de una propiedad en una variable privada.
+- Validar los valores asignados a una propiedad
+- Convertir los valores antes de asignarlos a una propiedad
+- Guardar el estado de una propiedad en una variable privada
+
+## Más
+- Usar **objetos literales** es la forma _más sencilla_ y rápida.
+- Usar **new Object()** para crear _objetos que se extenderán_ de otros objetos, o objetos vacios!
+- 🤖 Usar **métodos Constructores** es la forma _más flexible_, permite crea una plantilla, se puede "personalizar" y asginar valores por defecto.
+- Usar **Object.create()** para crear un nuevo objeto con un prototipo especificado, o crear objetos que heredan de otros objetos.
+- 🤖 **Los valores primitivos son más rápidos!** 
+- **Set** es una colección de valores únicos.
+---
+
+# Maps
+Objeto que almacena pares de clave-valor. Son útiles para almacenar datos donde el orden de los pares clave-valor es importante.
+
+## Ejemplo: almacenar datos de configuración
+
+🧑‍💻 JSON
+
+```
+ {
+   "apiKey": "1234567890",
+   "baseUrl": "https://example.com"
+ }
+```
+
+- Podemos usar un Map para almacenar la configuración de la app
+
+🧑‍💻
+
+```
+ const config = new Map();
+
+ config.set("apiKey", "1234567890");
+ config.set("baseUrl", "https://example.com");
+
+ const apiKey = config.get("apiKey");
+ const baseUrl = config.get("baseUrl");
+```
+
+- Este código creará un Map con dos elementos:
+
+1. La clave apiKey con el valor "1234567890".
+2. La clave baseUrl con el valor "https://example.com".
 
 ---
+
 
 # 👑 Array
 
@@ -521,6 +588,7 @@ Puede ser útil para eliminar elementos null o undefined de un arreglo 🤖
 
 ---
 
+
 # Seleccionar elementos HTML
 
 - Obtener datos desde el HTML:
@@ -564,84 +632,7 @@ Puede ser útil para eliminar elementos null o undefined de un arreglo 🤖
 
 ---
 
-# Maps
 
-- Objeto que almacena pares de clave-valor
-
-## Ejemplo: almacenar datos de configuración
-
-🧑‍💻 JSON
-
-```
- {
-   "apiKey": "1234567890",
-   "baseUrl": "https://example.com"
- }
-```
-
-- Podemos usar un Map para almacenar la configuración de la app
-
-🧑‍💻
-
-```
- const config = new Map();
-
- config.set("apiKey", "1234567890");
- config.set("baseUrl", "https://example.com");
-
- const apiKey = config.get("apiKey");
- const baseUrl = config.get("baseUrl");
-```
-
-- Este código creará un Map con dos elementos:
-
-1. La clave apiKey con el valor "1234567890".
-2. La clave baseUrl con el valor "https://example.com".
-
----
-
-# Closures
-
-- Es la combinación entre una función y el ámbito en el que esta fue declarada.
-- Permite a las funciones recordar el estado de su entorno de ejecución.
-- Se crea cuando una función es declarada dentro de otra función.
-- Se usa para crear funciones genéricas y reutilizables.
-  🧑‍💻
-
-```
- function counter() {
- let count = 0;
- return function increment() {
-     count++;
-     return count;
- }
- }
- const myCounter = counter();
- console.log(myCounter()); // Output: 1
- console.log(myCounter()); // Output: 2
- console.log(myCounter()); // Output: 3
-
-```
-
-## Ámbito léxico
-
-- Se refiere al alcance de una variable siguiendo la cadena de scopes.
-
-## Higher-Order Functions
-
-- 🤖 Es una función que toma una o más funciones como argumentos y/o devuelve una función como resultado.
-- Permiten abstraer conceptos comunes en las operaciones de las funciones y permiten la reutilización de código.
-- 🧑‍💻
-  ```
-  const numbers = [1, 2, 3, 4, 5];
-  const doubledNumbers = numbers.map(function(number) {
-  return number * 2;
-  });
-  console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
-  console.log(numbers) // Output: [1, 2, 3, 4, 5]
-  ```
-
----
 
 # 🤘 Asincronismo
 
@@ -886,8 +877,3 @@ for (let i = 0; i < l; i++) {
 
 # Pendiente 🤘 🐲
 
-- Ampliar()
-- "Error Object"
-- metodos de array y string
-- number properties
-- repasar operadores
